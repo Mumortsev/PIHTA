@@ -804,7 +804,49 @@ html[data-theme="dark"] .hero-photo { filter:saturate(.65) brightness(.72); }
 @media(max-width:374px) { .hero h1 { font-size:3.45rem; } .brand-caption { font-size:8px; } .hero-badge { font-size:9px; } }
 @media(prefers-reduced-motion:reduce) { .mobile-dialog { transition:none!important; } .house-card:hover,.btn:hover { transform:none!important; } }
 
-  </style>
+  
+/* PIHTA 2026 — cinematic motion and immersive gallery */
+:root{--motion-ease:cubic-bezier(.22,1,.36,1)}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{overflow-x:clip}
+.hero{isolation:isolate}
+.hero-photo{animation:pihtaHeroDrift 24s ease-in-out infinite alternate;transform-origin:50% 45%;will-change:transform}
+@keyframes pihtaHeroDrift{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.095) translate3d(-1%,1%,0)}}
+.hero .shell{animation:pihtaIntro 1.25s var(--motion-ease) both}
+@keyframes pihtaIntro{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}
+.house-card{transition:transform .65s var(--motion-ease),box-shadow .65s ease,border-color .4s ease!important}
+.house-card:hover{transform:translateY(-9px);box-shadow:0 26px 70px rgba(9,20,16,.15)}
+.house-photo{transition:transform 1.1s var(--motion-ease),filter .6s ease}
+.house-card:hover .house-photo{transform:scale(1.085);filter:saturate(1.1)}
+.btn{transition:transform .35s var(--motion-ease),background-color .35s ease,color .35s ease,box-shadow .35s ease!important}
+.btn:active{transform:scale(.975)}
+#reading-progress{position:fixed;z-index:100;top:0;left:0;width:100%;height:3px;transform:scaleX(0);transform-origin:left;background:#cda87c;pointer-events:none}
+.visual-gallery{background:#101c18;color:#f8f2e8;padding:clamp(72px,9vw,144px) 0;overflow:hidden}
+.visual-gallery .gallery-top{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:32px}
+.visual-gallery .gallery-title{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(3.2rem,7vw,7.2rem);line-height:.9;letter-spacing:-.045em}
+.visual-gallery .gallery-title em{color:#d6b48c;font-weight:400}
+.gallery-actions{display:flex;gap:10px}
+.gallery-arrow{width:50px;height:50px;border:1px solid rgba(255,255,255,.4);border-radius:50%;display:grid;place-items:center;color:#fff;transition:background .3s,transform .3s}
+.gallery-arrow:hover{background:rgba(255,255,255,.15);transform:scale(1.06)}
+.gallery-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;padding-bottom:10px}
+.gallery-track::-webkit-scrollbar{display:none}
+.gallery-slide{position:relative;flex:0 0 min(74vw,680px);height:clamp(300px,44vw,520px);scroll-snap-align:center;overflow:hidden;border-radius:5px;background:#29332c;cursor:zoom-in}
+.gallery-slide img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--motion-ease)}
+.gallery-slide:hover img{transform:scale(1.065)}
+.gallery-slide::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(5,14,11,.7));pointer-events:none}
+.gallery-slide .gallery-caption{position:absolute;bottom:25px;left:28px;z-index:1;font:italic 32px/1.1 "Cormorant Garamond",Georgia,serif;color:#fff}
+.gallery-slide .gallery-index{position:absolute;top:22px;left:26px;z-index:1;font:600 11px Manrope,sans-serif;letter-spacing:.18em;color:#fff}
+.gallery-hint{font-size:12px;opacity:.72;margin-top:18px;letter-spacing:.04em}
+#gallery-lightbox{border:0;padding:0;max-width:min(94vw,1250px);max-height:94vh;background:#111;color:white;overflow:hidden}
+#gallery-lightbox::backdrop{background:rgba(4,10,8,.91);backdrop-filter:blur(12px)}
+#gallery-lightbox img{display:block;max-width:100%;max-height:85vh;object-fit:contain}
+#gallery-lightbox .lightbox-close{position:absolute;right:14px;top:14px;z-index:2;background:rgba(0,0,0,.65);color:#fff;border:1px solid #fff8;border-radius:50%;width:46px;height:46px;font-size:24px}
+#gallery-lightbox .lightbox-text{padding:13px 20px;font-size:13px;color:#eee}
+.reveal-up{transition-duration:1.05s!important;transition-timing-function:var(--motion-ease)!important}
+@media(max-width:640px){.gallery-slide{flex-basis:86vw;height:390px}.gallery-slide .gallery-caption{font-size:27px;left:18px}.gallery-top{align-items:end}.gallery-arrow{width:42px;height:42px}.visual-gallery .gallery-title{font-size:clamp(3rem,12vw,4.5rem)}.hero-photo{object-position:50% 50%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-photo,.hero .shell{animation:none!important}.house-photo,.gallery-slide img,.house-card,.btn,.reveal-up{transition:none!important}.gallery-track{scroll-behavior:auto}}
+
+</style>
 
   <script>
     (() => {
@@ -892,6 +934,7 @@ html[data-theme="dark"] .hero-photo { filter:saturate(.65) brightness(.72); }
     </div>
   </header>
 
+  <div id="reading-progress" aria-hidden="true"></div>
   <main id="main-content">
     <!-- HERO -->
     <section id="home" class="hero min-h-[100svh] flex items-end pt-28 pb-16">
@@ -1172,6 +1215,33 @@ html[data-theme="dark"] .hero-photo { filter:saturate(.65) brightness(.72); }
         </p>
       </div>
     </section>
+
+    
+    <!-- IMMERSIVE EDITORIAL GALLERY — illustrative photography -->
+    <section id="gallery" class="visual-gallery" aria-labelledby="gallery-title">
+      <div class="shell">
+        <div class="gallery-top reveal-up">
+          <div><p class="eyebrow mb-5" style="color:#d6b48c">Атмосфера места</p>
+            <h2 id="gallery-title" class="gallery-title">Время <em>замедлиться.</em></h2>
+            <p style="color:#d7d9d0;margin-top:18px;max-width:540px;line-height:1.8">Лес, тишина, тёплый свет и воздух гор. Листайте фотографии — почувствуйте настроение будущего путешествия.</p>
+          </div>
+          <div class="gallery-actions">
+            <button type="button" class="gallery-arrow" id="gallery-prev" aria-label="Предыдущее фото">←</button>
+            <button type="button" class="gallery-arrow" id="gallery-next" aria-label="Следующее фото">→</button>
+          </div>
+        </div>
+        <div class="gallery-track" id="gallery-track" tabindex="0" aria-label="Фотогалерея, листайте горизонтально">
+          <button type="button" class="gallery-slide" aria-label="Увеличить фото: Дом среди леса"><img src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1300&q=85" alt="Деревянный дом в лесу, иллюстративная фотография" loading="lazy" decoding="async"><span class="gallery-index">01 / 05</span><span class="gallery-caption">Дом, где слышно лес</span></button>
+          <button type="button" class="gallery-slide" aria-label="Увеличить фото: Уютное шале"><img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1300&q=85" alt="Уютный деревянный дом среди деревьев, иллюстративная фотография" loading="lazy" decoding="async"><span class="gallery-index">02 / 05</span><span class="gallery-caption">Тепло внутри</span></button>
+          <button type="button" class="gallery-slide" aria-label="Увеличить фото: Отдых на природе"><img src="https://images.unsplash.com/photo-1478131143081-fd1d858f6a7e?auto=format&fit=crop&w=1300&q=85" alt="Отдых на природе, иллюстративная фотография" loading="lazy" decoding="async"><span class="gallery-index">03 / 05</span><span class="gallery-caption">Ближе к природе</span></button>
+          <button type="button" class="gallery-slide" aria-label="Увеличить фото: Хвойный лес"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1300&q=85" alt="Хвойный лес в мягком свете, иллюстративная фотография" loading="lazy" decoding="async"><span class="gallery-index">04 / 05</span><span class="gallery-caption">Лесные маршруты</span></button>
+          <button type="button" class="gallery-slide" aria-label="Увеличить фото: Горный пейзаж"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1300&q=85" alt="Горный пейзаж, иллюстративная фотография" loading="lazy" decoding="async"><span class="gallery-index">05 / 05</span><span class="gallery-caption">Горы зовут</span></button>
+        </div>
+        <p class="gallery-hint">← Листайте свайпом или стрелками · Нажмите на фотографию для просмотра</p>
+        <p style="font-size:11px;opacity:.5;margin-top:10px">Фотографии иллюстрируют атмосферу концепции и не являются подтверждёнными снимками объекта.</p>
+      </div>
+    </section>
+    <dialog id="gallery-lightbox" aria-label="Просмотр фотографии"><button class="lightbox-close" type="button" aria-label="Закрыть фото">×</button><img alt=""><div class="lightbox-text"></div></dialog>
 
     <!-- SPA -->
     <section id="spa-rituals" class="section-space bg-surface">
@@ -3007,6 +3077,51 @@ html[data-theme="dark"] .hero-photo { filter:saturate(.65) brightness(.72); }
         $$(".reveal-up").forEach(element => element.classList.add("is-visible"));
       }
     });
+  
+    /* Immersive gallery: native scroll snapping, swipe, keyboard and accessible lightbox */
+    (() => {
+      const track=document.getElementById('gallery-track');
+      const slides=[...track.querySelectorAll('.gallery-slide')];
+      const lightbox=document.getElementById('gallery-lightbox');
+      const lightboxImage=lightbox.querySelector('img');
+      const lightboxText=lightbox.querySelector('.lightbox-text');
+      const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+      const move=(direction)=>{
+        const current=track.scrollLeft;
+        const next=slides.reduce((best,slide,i)=>{
+          const distance=Math.abs(slide.offsetLeft-track.offsetLeft-current);
+          return distance<best.distance?{index:i,distance}:best;
+        },{index:0,distance:Infinity}).index;
+        const target=slides[Math.max(0,Math.min(slides.length-1,next+direction))];
+        target?.scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'nearest',inline:'center'});
+      };
+      document.getElementById('gallery-prev').addEventListener('click',()=>move(-1));
+      document.getElementById('gallery-next').addEventListener('click',()=>move(1));
+      track.addEventListener('keydown',event=>{
+        if(event.target.closest('button'))return;
+        if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();move(event.key==='ArrowRight'?1:-1)}
+      });
+      slides.forEach(slide=>slide.addEventListener('click',()=>{
+        const img=slide.querySelector('img');
+        lightboxImage.src=img.currentSrc||img.src;
+        lightboxImage.alt=img.alt;
+        lightboxText.textContent=slide.querySelector('.gallery-caption').textContent;
+        if(typeof lightbox.showModal==='function')lightbox.showModal();
+      }));
+      lightbox.querySelector('.lightbox-close').addEventListener('click',()=>lightbox.close());
+      lightbox.addEventListener('click',event=>{if(event.target===lightbox)lightbox.close()});
+      const bar=document.getElementById('reading-progress');
+      let scheduled=false;
+      const paint=()=>{
+        const max=document.documentElement.scrollHeight-window.innerHeight;
+        bar.style.transform='scaleX('+(max>0?Math.min(1,window.scrollY/max):0)+')';
+        scheduled=false;
+      };
+      window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(paint)}},{passive:true});
+      window.addEventListener('resize',paint,{passive:true});
+      paint();
+    })();
+
   </script>
 </body>
 </html>
