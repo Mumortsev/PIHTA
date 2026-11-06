@@ -1,0 +1,3012 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F6F3EC" id="browser-theme-color">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="ПИХТА & ПЛАТО — концепция горного бутик-глэмпинга в Лаго-Наки. Дизайнерские шале, горячий чан, фермерские завтраки и отдых в тишине гор.">
+  <title>ПИХТА & ПЛАТО — приватные шале среди гор Лаго-Наки</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ПИХТА & ПЛАТО — тишина, у которой есть адрес">
+  <meta property="og:description" content="Приватные шале, хвойный лес и горячий чан. Откройте свой ритм в горах Лаго-Наки.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+
+  <style>
+    html[data-theme="light"] {
+      color-scheme: light;
+      --surface: #F6F3EC;
+      --surface-rgb: 246 243 236;
+      --surface-dim: #EAE4D7;
+      --surface-dim-rgb: 234 228 215;
+      --surface-container-lowest: #FFFFFF;
+      --surface-container-lowest-rgb: 255 255 255;
+      --surface-container-low: #F0ECE1;
+      --surface-container-low-rgb: 240 236 225;
+      --surface-container: #EAE4D7;
+      --surface-container-rgb: 234 228 215;
+      --surface-container-high: #E2DAC9;
+      --surface-container-high-rgb: 226 218 201;
+      --surface-container-highest: #D8CEBA;
+      --surface-container-highest-rgb: 216 206 186;
+      --on-surface: #16201C;
+      --on-surface-rgb: 22 32 28;
+      --on-surface-variant: #4A5550;
+      --on-surface-variant-rgb: 74 85 80;
+      --primary: #9A652A;
+      --primary-rgb: 154 101 42;
+      --primary-container: #8C5820;
+      --primary-container-rgb: 140 88 32;
+      --on-primary: #FFFFFF;
+      --on-primary-rgb: 255 255 255;
+      --on-primary-container: #FFFFFF;
+      --on-primary-container-rgb: 255 255 255;
+      --secondary: #B85D19;
+      --secondary-rgb: 184 93 25;
+      --secondary-container: #FCE8D5;
+      --secondary-container-rgb: 252 232 213;
+      --on-secondary-container: #522500;
+      --on-secondary-container-rgb: 82 37 0;
+      --outline-variant: #C8BFA8;
+      --outline-variant-rgb: 200 191 168;
+      --shadow: 0 16px 48px rgb(31 37 26 / .055);
+    }
+
+    html[data-theme="dark"],
+    .hero {
+      color-scheme: dark;
+      --surface: #0E1513;
+      --surface-rgb: 14 21 19;
+      --surface-dim: #09100E;
+      --surface-dim-rgb: 9 16 14;
+      --surface-container-lowest: #09100E;
+      --surface-container-lowest-rgb: 9 16 14;
+      --surface-container-low: #161D1B;
+      --surface-container-low-rgb: 22 29 27;
+      --surface-container: #1A211F;
+      --surface-container-rgb: 26 33 31;
+      --surface-container-high: #242B29;
+      --surface-container-high-rgb: 36 43 41;
+      --surface-container-highest: #2F3634;
+      --surface-container-highest-rgb: 47 54 52;
+      --on-surface: #DDE4E0;
+      --on-surface-rgb: 221 228 224;
+      --on-surface-variant: #D3C4B6;
+      --on-surface-variant-rgb: 211 196 182;
+      --primary: #EEBE86;
+      --primary-rgb: 238 190 134;
+      --primary-container: #B58A57;
+      --primary-container-rgb: 181 138 87;
+      --on-primary: #472A00;
+      --on-primary-rgb: 71 42 0;
+      --on-primary-container: #2B1700;
+      --on-primary-container-rgb: 43 23 0;
+      --secondary: #FFB77A;
+      --secondary-rgb: 255 183 122;
+      --secondary-container: #4C2C15;
+      --secondary-container-rgb: 76 44 21;
+      --on-secondary-container: #FFDEC2;
+      --on-secondary-container-rgb: 255 222 194;
+      --outline-variant: #4F453A;
+      --outline-variant-rgb: 79 69 58;
+      --shadow: 0 16px 48px rgb(0 0 0 / .14);
+    }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary) var(--surface);
+      scrollbar-gutter: stable;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--surface);
+      color: var(--on-surface);
+      font-family: "Manrope", sans-serif;
+      font-weight: 500;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.modal-open { overflow: hidden; }
+
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--surface); }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 6px;
+    }
+
+    ::selection {
+      background: rgb(var(--primary-rgb) / .25);
+      color: var(--on-surface);
+    }
+
+    img { display: block; max-width: 100%; }
+    button, input, select, textarea { font: inherit; }
+    button, a, input, select { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    button:disabled { cursor: wait; opacity: .65; }
+    input, select { min-width: 0; }
+    input[type="checkbox"], input[type="radio"] {
+      accent-color: var(--primary);
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 4px;
+    }
+
+    body, section, header, footer, dialog, .card, .field, .btn,
+    .theme-toggle, .theme-toggle button, .scenario-tab, details,
+    .addon, .booking-panel {
+      transition:
+        background-color .4s ease,
+        color .4s ease,
+        border-color .4s ease;
+    }
+
+    section[id], #quick-booking {
+      scroll-margin-top: 108px;
+    }
+
+    .shell {
+      width: min(1280px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .section-space {
+      padding-block: clamp(64px, 8vw, 112px);
+    }
+
+    .editorial {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+      overflow-wrap: break-word;
+    }
+
+    .editorial em {
+      color: var(--primary);
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(2.35rem, 4.5vw, 4rem);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: currentColor;
+      flex-shrink: 0;
+    }
+
+    .copy {
+      color: var(--on-surface-variant);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .card {
+      min-width: 0;
+      background: var(--surface-container-lowest);
+      border: 1px solid rgb(var(--outline-variant-rgb) / .25);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .card-tint { background: var(--surface-container-low); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: .025em;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+
+    .btn-outline {
+      border-color: rgb(var(--outline-variant-rgb) / .75);
+      color: var(--on-surface);
+      background: transparent;
+    }
+
+    .btn-outline:hover { background: var(--surface-container); }
+
+    .btn-glass {
+      border-color: rgb(255 255 255 / .22);
+      background: rgb(255 255 255 / .07);
+      color: #F6F3EC;
+      backdrop-filter: blur(16px);
+    }
+
+    .btn-glass:hover { background: rgb(255 255 255 / .14); }
+
+    .icon-button {
+      display: inline-flex;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgb(var(--outline-variant-rgb) / .4);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--on-surface);
+    }
+
+    .material-symbols-outlined {
+      font-size: 22px;
+      line-height: 1;
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .field {
+      display: block;
+      width: 100%;
+      height: 50px;
+      padding: 11px 12px;
+      border: 1px solid rgb(var(--outline-variant-rgb) / .55);
+      border-radius: 9px;
+      background: var(--surface-container-lowest);
+      color: var(--on-surface);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .field-label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--on-surface-variant);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    input[type="date"]::-webkit-date-and-time-value { text-align: left; }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 4px;
+      border: 1px solid rgb(var(--outline-variant-rgb) / .4);
+      border-radius: 99px;
+      background: var(--surface-container-low);
+    }
+
+    .theme-toggle button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 8px 10px;
+      border: 0;
+      border-radius: 99px;
+      background: transparent;
+      color: var(--on-surface-variant);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .theme-toggle button[aria-pressed="true"] {
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+
+    .theme-toggle .material-symbols-outlined { font-size: 15px; }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 40;
+      background: rgb(var(--surface-rgb) / .93);
+      border-bottom: 1px solid rgb(var(--outline-variant-rgb) / .3);
+      backdrop-filter: blur(20px);
+    }
+
+    .brand-name {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      line-height: 1.1;
+    }
+
+    .brand-caption {
+      margin-top: 5px;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .025em;
+      line-height: 1.5;
+      color: var(--on-surface-variant);
+    }
+
+    .nav-link {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--on-surface-variant);
+      white-space: nowrap;
+    }
+
+    .nav-link:hover { color: var(--primary); }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      color: var(--on-surface);
+      background: #09100E;
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: filter .6s ease;
+    }
+
+    html[data-theme="dark"] .hero-photo { filter: brightness(.75); }
+
+    .hero h1 {
+      max-width: 1050px;
+      margin: 0;
+      font-size: clamp(2.75rem, 5.8vw, 5.6rem);
+      line-height: .99;
+      color: #F6F3EC;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      max-width: 100%;
+      padding: 9px 13px;
+      border: 1px solid rgb(255 255 255 / .18);
+      border-radius: 99px;
+      background: rgb(9 16 14 / .52);
+      backdrop-filter: blur(12px);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .045em;
+      color: #F0EADF;
+    }
+
+    .booking-panel {
+      padding: 20px;
+      border: 1px solid rgb(255 255 255 / .16);
+      border-radius: 16px;
+      background: rgb(22 29 27 / .92);
+      backdrop-filter: blur(24px);
+    }
+
+    .sound-waves {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      width: 23px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
+    .sound-waves i {
+      width: 2px;
+      height: 5px;
+      border-radius: 2px;
+      background: var(--primary);
+    }
+
+    .is-playing .sound-waves i {
+      animation: sound-wave 1s ease-in-out infinite alternate;
+    }
+
+    .is-playing .sound-waves i:nth-child(2) { animation-delay: -.7s; }
+    .is-playing .sound-waves i:nth-child(3) { animation-delay: -.4s; }
+    .is-playing .sound-waves i:nth-child(4) { animation-delay: -.9s; }
+
+    @keyframes sound-wave {
+      from { height: 4px; }
+      to { height: 19px; }
+    }
+
+    .house-photo {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      transition: transform .8s ease;
+    }
+
+    @media (hover: hover) {
+      .house-card:hover .house-photo { transform: scale(1.035); }
+    }
+
+    .scenario-tab {
+      min-height: 44px;
+      padding: 11px 16px;
+      border: 1px solid rgb(var(--outline-variant-rgb) / .45);
+      border-radius: 99px;
+      color: var(--on-surface-variant);
+      background: transparent;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .scenario-tab[aria-selected="true"] {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--on-primary);
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgb(var(--outline-variant-rgb) / .22);
+      cursor: pointer;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .check-item:last-child { border-bottom: 0; }
+    .check-item input { margin-top: 3px; }
+    .check-item input:checked + span {
+      color: var(--on-surface-variant);
+      text-decoration: line-through;
+      text-decoration-color: rgb(var(--primary-rgb) / .65);
+    }
+
+    progress {
+      appearance: none;
+      display: block;
+      width: 100%;
+      height: 5px;
+      border: 0;
+      border-radius: 99px;
+      background: var(--surface-container-high);
+      overflow: hidden;
+    }
+
+    progress::-webkit-progress-bar { background: var(--surface-container-high); }
+    progress::-webkit-progress-value { background: var(--primary); border-radius: 99px; }
+    progress::-moz-progress-bar { background: var(--primary); border-radius: 99px; }
+
+    .addon {
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr) auto;
+      align-items: start;
+      gap: 10px;
+      padding: 14px 12px;
+      border: 1px solid rgb(var(--outline-variant-rgb) / .4);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .addon:has(input:checked) {
+      background: rgb(var(--primary-rgb) / .08);
+      border-color: rgb(var(--primary-rgb) / .65);
+    }
+
+    .addon input { margin-top: 3px; }
+    .addon-price {
+      padding-top: 1px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .price { white-space: nowrap; }
+
+    .quote-flash { animation: quote-flash 1.6s ease; }
+
+    @keyframes quote-flash {
+      0%, 100% { box-shadow: var(--shadow); }
+      35% { box-shadow: 0 0 0 5px rgb(var(--primary-rgb) / .25), var(--shadow); }
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 560px;
+      border: 0;
+      display: block;
+      transition: filter .4s ease;
+    }
+
+    html[data-theme="dark"] .map-frame {
+      filter: brightness(.78) saturate(.65) contrast(1.05);
+    }
+
+    details {
+      padding: 0 24px;
+      background: var(--surface-container-lowest);
+      border: 1px solid rgb(var(--outline-variant-rgb) / .25);
+      border-radius: 12px;
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 22px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      color: var(--primary);
+      font-size: 26px;
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+
+    details[open] summary::after { content: "−"; }
+
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(36px);
+      transition:
+        opacity .75s cubic-bezier(.22, 1, .36, 1),
+        transform .75s cubic-bezier(.22, 1, .36, 1),
+        background-color .4s ease,
+        color .4s ease,
+        border-color .4s ease;
+    }
+
+    .reveal-up.is-visible { opacity: 1; transform: translateY(0); }
+    .delay-100 { transition-delay: .1s; }
+    .delay-200 { transition-delay: .2s; }
+    .delay-300 { transition-delay: .3s; }
+
+    html:not(.reveal-ready) .reveal-up {
+      opacity: 1;
+      transform: none;
+    }
+
+    dialog {
+      padding: 0;
+      color: var(--on-surface);
+      background: var(--surface);
+      border: 1px solid rgb(var(--outline-variant-rgb) / .4);
+      overscroll-behavior: contain;
+    }
+
+    dialog::backdrop {
+      background: rgb(4 10 8 / .75);
+      backdrop-filter: blur(7px);
+    }
+
+    .booking-dialog {
+      width: min(860px, calc(100% - 24px));
+      max-width: 860px;
+      max-height: calc(100dvh - 32px);
+      margin: auto;
+      border-radius: 20px;
+      overflow-y: auto;
+    }
+
+    .mobile-dialog {
+      inset: 0 0 0 auto;
+      width: min(420px, 100%);
+      max-width: 100%;
+      height: 100dvh;
+      max-height: 100dvh;
+      margin: 0 0 0 auto;
+      border-radius: 18px 0 0 18px;
+      overflow-y: auto;
+    }
+
+    .modal-tab {
+      min-height: 64px;
+      padding: 14px;
+      border: 1px solid rgb(var(--outline-variant-rgb) / .5);
+      border-radius: 10px;
+      background: transparent;
+      color: var(--on-surface-variant);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .modal-tab[aria-selected="true"] {
+      background: var(--surface-container);
+      border-color: var(--primary);
+      color: var(--on-surface);
+    }
+
+    .demo-day {
+      min-width: 0;
+      padding: 9px 2px;
+      border: 1px solid rgb(var(--outline-variant-rgb) / .45);
+      border-radius: 8px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .demo-day.selected {
+      background: rgb(var(--primary-rgb) / .16);
+      border-color: var(--primary);
+    }
+
+    .toast {
+      position: fixed;
+      z-index: 100;
+      inset: auto 16px max(20px, env(safe-area-inset-bottom)) auto;
+      width: min(430px, calc(100% - 32px));
+      padding: 16px 18px;
+      border: 1px solid rgb(var(--outline-variant-rgb) / .65);
+      border-radius: 14px;
+      background: var(--surface-container-lowest);
+      color: var(--on-surface);
+      box-shadow: 0 15px 70px rgb(0 0 0 / .2);
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 12px;
+      top: -100px;
+      z-index: 120;
+      padding: 12px 18px;
+      background: var(--surface);
+      color: var(--on-surface);
+    }
+
+    .skip-link:focus { top: 12px; }
+
+    @media (min-width: 768px) {
+      .shell { width: min(1280px, calc(100% - 80px)); }
+      .booking-panel { padding: 24px; }
+    }
+
+    @media (max-width: 374px) {
+      .brand-name { font-size: 20px; }
+      .brand-caption { font-size: 8px; }
+      .hero h1 { font-size: 2.55rem; }
+      .addon { padding-inline: 9px; gap: 7px; }
+      .addon-price { font-size: 10px; }
+      .map-frame { height: 610px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition-duration: .01ms !important;
+        transition-delay: 0ms !important;
+      }
+      .reveal-up { opacity: 1 !important; transform: none !important; }
+    }
+
+/* PIHTA & PLATO — EDITORIAL DESIGN SYSTEM / 2026 */
+:root { --ease-lux: cubic-bezier(.22,1,.36,1); }
+html[data-theme="light"] { --surface:#F5F2EA; --surface-rgb:245 242 234; --surface-container-low:#EDE8DD; --surface-container-low-rgb:237 232 221; --primary:#805D37; --primary-rgb:128 93 55; --primary-container:#253B32; --primary-container-rgb:37 59 50; --on-primary-container:#fff; --on-primary-container-rgb:255 255 255; --on-surface:#202D27; --on-surface-rgb:32 45 39; }
+html[data-theme="dark"] { --surface:#111A17; --surface-rgb:17 26 23; --primary:#E1B786; --primary-rgb:225 183 134; --primary-container:#D7AD7C; --primary-container-rgb:215 173 124; }
+body { line-height:1.65; }
+.shell { width:min(1320px,calc(100% - 36px)); }
+.section-space { padding-block:clamp(86px,10vw,148px); }
+.editorial { letter-spacing:-.045em; line-height:1.02; }
+.section-title { font-size:clamp(3.25rem,6vw,6.6rem); max-width:1000px; }
+.section-title em { font-weight:500; }
+.eyebrow { font-size:11px; letter-spacing:.21em; }
+.copy { font-size:clamp(14px,1.15vw,16px); line-height:1.9; }
+.field-label { font-size:11px; }
+.brand-name { font-size:clamp(22px,2vw,30px); letter-spacing:.005em; }
+.brand-caption { letter-spacing:.09em; font-size:9px; }
+.site-header { background:rgb(var(--surface-rgb)/.90); transition:background .3s ease,box-shadow .3s ease; }
+.site-header.is-scrolled { box-shadow:0 10px 45px rgb(0 0 0/.07); }
+.nav-link { font-size:11px; letter-spacing:.035em; position:relative; }
+.nav-link::after { content:"";position:absolute;bottom:-8px;left:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease-lux); }
+.nav-link:hover::after,.nav-link:focus-visible::after { transform:scaleX(1); }
+.btn { border-radius:4px; min-height:52px; padding:14px 23px; font-size:12px; letter-spacing:.045em; transition:transform .35s var(--ease-lux),background-color .35s ease,color .35s ease,border-color .35s ease,box-shadow .35s ease; }
+@media (hover:hover) { .btn:hover { transform:translateY(-3px); box-shadow:0 12px 26px rgb(0 0 0/.10); } }
+.card { border-radius:7px; box-shadow:0 18px 65px rgb(30 35 28/.035); }
+.hero { min-height:100svh; padding-bottom:clamp(48px,7vw,105px); }
+.hero-photo { object-position:50% 48%; filter:saturate(.76) contrast(1.04); }
+html[data-theme="dark"] .hero-photo { filter:saturate(.65) brightness(.72); }
+.hero h1 { max-width:980px; font-size:clamp(4rem,9.3vw,10.5rem); line-height:.86; letter-spacing:-.057em; text-wrap:balance; }
+.hero h1 em { color:#E7BD8E; font-weight:500; }
+.hero .eyebrow { color:#E9BE8A; }
+.hero .shell > .max-w-2xl { max-width:560px; }
+.hero .shell > .max-w-2xl p { font-size:clamp(15px,1.4vw,19px); line-height:1.8; }
+.hero-badge { border-radius:3px; font-size:10px; letter-spacing:.08em; }
+.booking-panel { border-radius:6px; background:rgb(18 30 25/.88); border:1px solid rgb(255 255 255/.23); box-shadow:0 22px 75px rgb(0 0 0/.18); }
+.field { border-radius:3px; height:54px; font-size:14px; }
+.house-card { transition:transform .65s var(--ease-lux),box-shadow .65s var(--ease-lux); }
+@media (hover:hover) { .house-card:hover { transform:translateY(-8px); box-shadow:0 30px 65px rgb(30 35 28/.13); } }
+.house-photo { height:clamp(280px,29vw,410px); }
+.house-card .editorial { font-size:clamp(2.1rem,3vw,3rem); }
+.scenario-tab { border-radius:4px; transition:background .3s ease,transform .3s var(--ease-lux); }
+.scenario-tab:active { transform:scale(.97); }
+.addon,details,.modal-tab { border-radius:5px; }
+.reveal-up { transform:translateY(22px); transition:opacity .9s var(--ease-lux),transform .9s var(--ease-lux),background-color .4s ease,color .4s ease,border-color .4s ease; }
+.mobile-dialog { border-radius:0; transform:translateX(100%); opacity:0; transition:transform .45s var(--ease-lux),opacity .3s ease,display .45s allow-discrete,overlay .45s allow-discrete; }
+.mobile-dialog[open] { transform:translateX(0); opacity:1; }
+@starting-style { .mobile-dialog[open] { transform:translateX(100%); opacity:0; } }
+.booking-dialog { border-radius:9px; }
+#back-to-top { position:fixed;bottom:max(22px,env(safe-area-inset-bottom));left:22px;z-index:35;width:48px;height:48px;border:1px solid rgb(var(--outline-variant-rgb)/.6);background:var(--surface);color:var(--on-surface);border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 28px rgb(0 0 0/.13);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s ease,transform .3s ease; }
+#back-to-top.is-visible { opacity:1;transform:translateY(0);pointer-events:auto; }
+@media(min-width:768px) { .shell { width:min(1320px,calc(100% - 92px)); } }
+@media(max-width:767px) {
+ .section-space { padding-block:76px; }
+ .hero { padding-top:112px; padding-bottom:48px; }
+ .hero h1 { font-size:clamp(3.9rem,15vw,6.4rem);line-height:.91; }
+ .hero .shell > .max-w-2xl p { font-size:15px; }
+ .booking-panel { padding:16px; }
+ .house-photo { height:330px; }
+ .section-title { font-size:clamp(3rem,11vw,4.7rem); }
+ .mobile-dialog { width:min(420px,100%); }
+ .map-frame { height:430px; }
+ #back-to-top { width:44px;height:44px;left:14px;bottom:max(16px,env(safe-area-inset-bottom)); }
+}
+@media(max-width:374px) { .hero h1 { font-size:3.45rem; } .brand-caption { font-size:8px; } .hero-badge { font-size:9px; } }
+@media(prefers-reduced-motion:reduce) { .mobile-dialog { transition:none!important; } .house-card:hover,.btn:hover { transform:none!important; } }
+
+  </style>
+
+  <script>
+    (() => {
+      let theme = "light";
+      try {
+        const saved = localStorage.getItem("pihta-theme");
+        if (saved === "light" || saved === "dark") theme = saved;
+      } catch {}
+      document.documentElement.dataset.theme = theme;
+      document.getElementById("browser-theme-color").content =
+        theme === "dark" ? "#0E1513" : "#F6F3EC";
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ["class", '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: Object.fromEntries([
+            "surface", "surface-dim", "surface-container-lowest",
+            "surface-container-low", "surface-container",
+            "surface-container-high", "surface-container-highest",
+            "on-surface", "on-surface-variant", "primary",
+            "primary-container", "on-primary", "on-primary-container",
+            "secondary", "secondary-container", "on-secondary-container",
+            "outline-variant"
+          ].map(name => [
+            name, `rgb(var(--${name}-rgb) / <alpha-value>)`
+          ])),
+          fontFamily: {
+            sans: ["Manrope", "sans-serif"],
+            editorial: ["Cormorant Garamond", "Georgia", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="flex h-20 items-center justify-between gap-4 px-5 md:px-8">
+      <a href="#home" aria-label="ПИХТА & ПЛАТО — на главную" class="shrink-0">
+        <div class="brand-name text-primary">ПИХТА &amp; ПЛАТО</div>
+        <div class="brand-caption">Горный бутик-глэмпинг в Лаго-Наки</div>
+      </a>
+
+      <nav aria-label="Основная навигация" class="hidden xl:flex items-center gap-4">
+        <a class="nav-link" href="#concept">О концепции</a>
+        <a class="nav-link" href="#houses-catalog">Дома</a>
+        <a class="nav-link" href="#spa-rituals">SPA &amp; Чан</a>
+        <a class="nav-link" href="#checklist">Чек-лист</a>
+        <a class="nav-link" href="#logistics">Логистика</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <div class="theme-toggle hidden sm:inline-flex" role="group" aria-label="Цветовая тема">
+          <button type="button" data-theme-choice="light" aria-pressed="true" title="Утро — светлая тема">
+            <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+            Утро
+          </button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false" title="Ночь — тёмная тема">
+            <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+            Ночь
+          </button>
+        </div>
+
+        <a class="btn btn-primary hidden xl:inline-flex" href="#booking-module">
+          Забронировать −10%
+        </a>
+
+        <button type="button" id="menu-button"
+                class="icon-button xl:hidden"
+                aria-label="Открыть меню"
+                aria-controls="mobile-menu"
+                aria-expanded="false">
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO -->
+    <section id="home" class="hero min-h-[100svh] flex items-end pt-28 pb-16">
+      <img class="hero-photo"
+           src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&amp;fit=crop&amp;w=1800&amp;q=82"
+           srcset="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&amp;fit=crop&amp;w=800&amp;q=80 800w, https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&amp;fit=crop&amp;w=1400&amp;q=82 1400w, https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&amp;fit=crop&amp;w=2000&amp;q=82 2000w"
+           sizes="100vw"
+           alt="Деревянное шале среди высоких деревьев, атмосфера уединения"
+           width="2200" height="1467" fetchpriority="high" decoding="async">
+
+      <div class="absolute inset-0 -z-20 bg-gradient-to-t from-[#09100e]/95 via-[#09100e]/60 to-[#09100e]/30"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#09100e]/45 to-transparent"></div>
+
+      <div class="shell">
+        <div class="flex flex-wrap items-center gap-3 mb-8">
+          <span class="hero-badge">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0" aria-hidden="true"></span>
+            Лаго-Наки · Азиш-Тау · 1 400 м
+          </span>
+          <span class="hero-badge">Круглый год · Камерный отдых</span>
+
+          <button type="button" id="atmosphere-button"
+                  class="hero-badge text-left"
+                  aria-pressed="false">
+            <span class="sound-waves" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+            <span id="atmosphere-label">Слушать атмосферу: костёр и ночной лес</span>
+          </button>
+
+          <label id="volume-control" class="hero-badge gap-3" hidden>
+            <span>Громкость</span>
+            <input id="atmosphere-volume" type="range" min="0" max="100" value="30"
+                   class="w-20 accent-[#eebe86]" aria-label="Громкость звуков природы">
+          </label>
+        </div>
+
+        <p class="eyebrow mb-4">Бутик-глэмпинг / Лаго-Наки / 1400 м</p>
+
+        <h1 class="editorial">
+          Перезагрузка в тишине гор:
+          <em>дизайнерские шале</em>
+          с панорамой на хребет и <em>горячим чаном</em>
+        </h1>
+
+        <div class="mt-7 max-w-2xl">
+          <p class="text-[15px] md:text-base text-[#e5dfd5] leading-relaxed">
+            Для двоих, семьи и долгих разговоров у огня. Панорамные окна,
+            тёплые полы и от 35 метров между домами — чтобы слышать ветер
+            в кронах пихт, а не соседей.
+          </p>
+        </div>
+
+        <div class="mt-8 mb-8 flex flex-col sm:flex-row sm:items-center gap-4 max-w-3xl rounded-xl border border-white/15 bg-[#09100e]/65 p-4 backdrop-blur-md">
+          <span class="material-symbols-outlined text-primary text-3xl" aria-hidden="true">verified</span>
+          <div class="min-w-0 flex-1">
+            <p class="text-primary text-xs font-bold uppercase tracking-widest">Привилегия прямого бронирования</p>
+            <p class="text-[#ded8ce] text-xs mt-1 leading-relaxed">
+              −10% на проживание от базового тарифа для агрегаторов.
+              Альпийский травяной сбор и сухие дрова — комплимент от нас.
+            </p>
+          </div>
+          <a href="#quick-booking" class="btn btn-glass shrink-0">Выбрать даты</a>
+        </div>
+
+        <div id="quick-booking" class="booking-panel">
+          <form id="quick-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+            <div>
+              <label for="quick-arrival" class="field-label">Заезд</label>
+              <input id="quick-arrival" name="arrival" data-field class="field" type="date" required>
+            </div>
+            <div>
+              <label for="quick-departure" class="field-label">Выезд</label>
+              <input id="quick-departure" name="departure" data-field class="field" type="date" required>
+            </div>
+            <div>
+              <label for="quick-house" class="field-label">Ваше пространство</label>
+              <select id="quick-house" name="house" data-field class="field">
+                <option value="aframe">A-Frame «Пихта»</option>
+                <option value="barn">Барнхаус «Плато»</option>
+                <option value="sphere">Сфера «Орион»</option>
+              </select>
+            </div>
+            <div>
+              <label for="quick-guests" class="field-label">Гости</label>
+              <select id="quick-guests" name="guests" data-field class="field">
+                <option value="2">2 гостя</option>
+                <option value="3">3 гостя</option>
+                <option value="4">4 гостя</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-full sm:col-span-2 lg:col-span-1">
+              Найти дом
+              <span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
+            </button>
+          </form>
+          <p class="mt-3 text-[10px] text-[#bfbab0]">
+            Выбор дат формирует предварительный расчёт. Доступность подтверждает консьерж.
+          </p>
+        </div>
+
+        <div class="mt-6 flex flex-wrap justify-between gap-3 text-[10px] text-[#d1c7b8] uppercase tracking-widest">
+          <span>01 / 06 &nbsp; — &nbsp; Место, в которое возвращаются</span>
+          <a href="#concept" class="inline-flex items-center gap-2">
+            Почувствовать место
+            <span class="material-symbols-outlined text-base" aria-hidden="true">south</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section id="concept" class="section-space bg-surface">
+      <div class="shell">
+        <div class="reveal-up grid md:grid-cols-[1.2fr_.8fr] gap-8 items-end mb-10">
+          <div>
+            <p class="eyebrow mb-4">Кодекс уединения</p>
+            <h2 class="editorial section-title">Территория <em>безусловной тишины</em></h2>
+          </div>
+          <p class="copy max-w-lg">
+            На границе Краснодарского края и Адыгеи время приобретает другой ритм.
+            Мы оставили больше пространства между домами и меньше поводов куда-то спешить.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+          <article class="card card-tint p-7 md:p-10 md:col-span-7 reveal-up">
+            <span class="material-symbols-outlined text-primary text-3xl mb-5" aria-hidden="true">landscape</span>
+            <p class="eyebrow mb-3">Личное пространство</p>
+            <h3 class="editorial text-4xl md:text-5xl mb-4">Приватность <em>35+ метров</em></h3>
+            <p class="copy max-w-xl">
+              Панорамные фасады ориентированы к деревьям и горному пейзажу.
+              Террасы разделены естественным рельефом и зеленью:
+              утренний кофе остаётся вашим маленьким ритуалом.
+            </p>
+            <div class="flex items-center gap-3 mt-8" aria-label="Расстояние между домами от 35 до 70 метров">
+              <span class="w-2 h-2 bg-primary rounded-full shrink-0"></span>
+              <span class="h-px bg-primary/35 flex-1"></span>
+              <span class="text-primary text-xs font-bold whitespace-nowrap">35–70 м между домами</span>
+              <span class="h-px bg-primary/35 flex-1"></span>
+              <span class="w-2 h-2 bg-primary rounded-full shrink-0"></span>
+            </div>
+          </article>
+
+          <article class="card p-7 md:p-10 md:col-span-5 reveal-up delay-100">
+            <span class="material-symbols-outlined text-primary text-3xl mb-5" aria-hidden="true">bedtime</span>
+            <p class="eyebrow mb-3">Право на покой</p>
+            <h3 class="editorial text-4xl mb-4">После десяти — <em>только лес</em></h3>
+            <p class="copy">
+              Тихий режим с 22:00 до 09:00. Без колонок, караоке и салютов.
+              Слышны лишь ветер, ночные птицы и потрескивание дров.
+            </p>
+            <div class="mt-7 rounded-lg bg-surface-container-low p-4 text-xs text-on-surface-variant">
+              Камерный формат для отдыха. Шумные мероприятия на территории не проводятся.
+            </div>
+          </article>
+
+          <article class="card p-7 md:col-span-4 reveal-up">
+            <span class="material-symbols-outlined text-primary text-3xl mb-5" aria-hidden="true">forest</span>
+            <h3 class="editorial text-3xl mb-3">На высоте <em>1 400 метров</em></h3>
+            <p class="copy">
+              Хребет Азиш-Тау, прохладные рассветы и реликтовая кавказская пихта Нордмана.
+              Даже короткая прогулка становится отдельным событием.
+            </p>
+          </article>
+
+          <article class="card p-7 md:col-span-4 reveal-up delay-100">
+            <span class="material-symbols-outlined text-primary text-3xl mb-5" aria-hidden="true">bakery_dining</span>
+            <h3 class="editorial text-3xl mb-3">Утро со <em>вкусом гор</em></h3>
+            <p class="copy">
+              Фермерские завтраки с ремесленным сыром, горным каштановым мёдом
+              и альпийскими сборами трав. Состав и подачу уточним перед заездом.
+            </p>
+          </article>
+
+          <article class="card p-7 md:col-span-4 reveal-up delay-200">
+            <span class="material-symbols-outlined text-primary text-3xl mb-5" aria-hidden="true">mode_heat</span>
+            <h3 class="editorial text-3xl mb-3">Тепло <em>в любое время года</em></h3>
+            <p class="copy">
+              Тёплые полы, удобная кухня и плотный текстиль.
+              За окном может идти снег — внутри по-домашнему уютно.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOUSES -->
+    <section id="houses-catalog" class="section-space bg-surface-container-low">
+      <div class="shell">
+        <div class="reveal-up max-w-3xl mb-10">
+          <p class="eyebrow mb-4">Коллекция пространств</p>
+          <h2 class="editorial section-title">Три архитектурные формы для <em>глубокого погружения</em></h2>
+          <p class="copy mt-5">Разный характер архитектуры. Одинаковое внимание к вашему отдыху.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="house-card card overflow-hidden flex flex-col reveal-up">
+            <div class="relative overflow-hidden">
+              <img class="house-photo"
+                   src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=900&q=80"
+                   alt="Деревянное шале среди деревьев — иллюстрация архитектурной концепции A-Frame"
+                   width="900" height="650" loading="lazy" decoding="async">
+              <span class="absolute left-4 top-4 rounded-full bg-[#09100e]/75 px-3 py-1.5 text-[10px] font-bold text-white backdrop-blur-md">01 / ЛЕСНОЙ ХАРАКТЕР</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between gap-3 text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">
+                <span>44 м²</span><span>До 4 гостей</span>
+              </div>
+              <h3 class="editorial text-4xl mb-3">A-Frame <em>«Пихта»</em></h3>
+              <p class="copy mb-6 flex-1">
+                Высокий потолок, тёплое дерево и собственная терраса.
+                Для тех, кто мечтал пожить в доме с характером.
+              </p>
+              <div class="text-xs text-on-surface-variant mb-5">Кухня · Тёплый пол · Терраса</div>
+              <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
+                <span class="text-2xl font-semibold price">12 900 ₽</span>
+                <span class="text-xs text-on-surface-variant">/ ночь до скидки</span>
+              </div>
+              <button type="button" class="btn btn-outline w-full" data-select-house="aframe">Выбрать шале</button>
+            </div>
+          </article>
+
+          <article class="house-card card overflow-hidden flex flex-col reveal-up delay-100">
+            <div class="relative overflow-hidden">
+              <img class="house-photo"
+                   src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=900&q=80"
+                   alt="Дом с большими окнами — иллюстрация архитектурной концепции барнхауса"
+                   width="900" height="650" loading="lazy" decoding="async">
+              <span class="absolute left-4 top-4 rounded-full bg-[#09100e]/75 px-3 py-1.5 text-[10px] font-bold text-white backdrop-blur-md">02 / БОЛЬШЕ ПРОСТРАНСТВА</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between gap-3 text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">
+                <span>58 м²</span><span>До 4 гостей</span>
+              </div>
+              <h3 class="editorial text-4xl mb-3">Барнхаус <em>«Плато»</em></h3>
+              <p class="copy mb-6 flex-1">
+                Спокойная геометрия, просторная гостиная и панорамное остекление.
+                Для семейных завтраков и длинных выходных.
+              </p>
+              <div class="text-xs text-on-surface-variant mb-5">Отдельная спальня · Кухня · Панорама</div>
+              <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
+                <span class="text-2xl font-semibold price">15 900 ₽</span>
+                <span class="text-xs text-on-surface-variant">/ ночь до скидки</span>
+              </div>
+              <button type="button" class="btn btn-outline w-full" data-select-house="barn">Выбрать шале</button>
+            </div>
+          </article>
+
+          <article class="house-card card overflow-hidden flex flex-col reveal-up delay-200">
+            <div class="relative overflow-hidden">
+              <img class="house-photo"
+                   src="https://images.unsplash.com/photo-1478131143081-fd1d858f6a7e?auto=format&fit=crop&w=900&q=80"
+                   alt="Атмосферная иллюстрация камерного отдыха на природе для концепции сферы"
+                   width="900" height="650" loading="lazy" decoding="async">
+              <span class="absolute left-4 top-4 rounded-full bg-[#09100e]/75 px-3 py-1.5 text-[10px] font-bold text-white backdrop-blur-md">03 / ТОЛЬКО ДЛЯ ДВОИХ</span>
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <div class="flex items-center justify-between gap-3 text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">
+                <span>32 м²</span><span>До 2 гостей</span>
+              </div>
+              <h3 class="editorial text-4xl mb-3">Сфера <em>«Орион»</em></h3>
+              <p class="copy mb-6 flex-1">
+                Камерное пространство с мягкими линиями и видом на лес.
+                Для поездки, в которой всё внимание — друг другу.
+              </p>
+              <div class="text-xs text-on-surface-variant mb-5">Панорамное окно · Санузел · Терраса</div>
+              <div class="flex flex-wrap items-end justify-between gap-3 mb-5">
+                <span class="text-2xl font-semibold price">10 900 ₽</span>
+                <span class="text-xs text-on-surface-variant">/ ночь до скидки</span>
+              </div>
+              <button type="button" class="btn btn-outline w-full" data-select-house="sphere">Выбрать сферу</button>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-6 text-xs text-on-surface-variant">
+          Тарифы и изображения используются для презентации концепции.
+          Калькулятор ниже показывает скидку 10% на проживание; дополнительные услуги оплачиваются отдельно.
+        </p>
+      </div>
+    </section>
+
+    <!-- SPA -->
+    <section id="spa-rituals" class="section-space bg-surface">
+      <div class="shell grid lg:grid-cols-2 gap-9 lg:gap-14 items-center">
+        <div class="reveal-up relative">
+          <img class="w-full h-[420px] md:h-[610px] object-cover rounded-2xl"
+               src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1100&q=85"
+               alt="Сумеречный хвойный лес — атмосфера вечернего SPA-ритуала"
+               width="1100" height="1350" loading="lazy" decoding="async">
+          <div class="absolute inset-x-5 bottom-5 rounded-xl border border-white/20 bg-[#09100e]/75 p-5 backdrop-blur-md text-white">
+            <p class="font-editorial text-3xl italic font-semibold">Никуда не спешить — тоже план.</p>
+            <p class="text-xs text-[#e5dfd5] mt-2">Тёплая вода. Прохладный воздух. Ваш вечер в горах.</p>
+          </div>
+        </div>
+
+        <div class="reveal-up delay-100">
+          <p class="eyebrow mb-4">Личный ритуал восстановления</p>
+          <h2 class="editorial section-title">Парящий <em>сибирский чан</em> под звёздным небом Лаго-Наки</h2>
+          <p class="copy mt-6">
+            Горячая вода, аромат хвои и вечер, который принадлежит только вам.
+            Подготовим чан к согласованному времени, а рядом оставим травяной чай.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-5 mt-8">
+            <div class="card p-5">
+              <span class="material-symbols-outlined text-primary mb-3" aria-hidden="true">spa</span>
+              <h3 class="editorial text-3xl mb-2"><em>Пихтовая</em> запарка</h3>
+              <p class="copy text-xs">Аромат реликтовой кавказской пихты Нордмана и альпийских трав.</p>
+            </div>
+            <div class="card p-5">
+              <span class="material-symbols-outlined text-primary mb-3" aria-hidden="true">water_drop</span>
+              <h3 class="editorial text-3xl mb-2"><em>Горная</em> свежесть</h3>
+              <p class="copy text-xs">Родниковая вода с ледников Оштена — часть гастрономической концепции места.</p>
+            </div>
+          </div>
+
+          <div class="mt-7 flex flex-wrap items-center justify-between gap-4 border-t border-outline-variant/40 pt-6">
+            <div>
+              <p class="text-xs text-on-surface-variant">Подготовка чана · один сеанс</p>
+              <p class="text-2xl font-semibold mt-1 price">6 500 ₽</p>
+            </div>
+            <button type="button" id="add-hot-tub" class="btn btn-primary">Добавить к отдыху</button>
+          </div>
+          <p class="text-xs text-on-surface-variant mt-4">
+            Время, длительность и комфортную температуру согласуем заранее.
+            При ограничениях по здоровью обсудите посещение с врачом.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHECKLIST -->
+    <section id="checklist" class="section-space bg-surface-container-low">
+      <div class="shell">
+        <div class="reveal-up grid lg:grid-cols-[1fr_.7fr] gap-8 items-end mb-8">
+          <div>
+            <p class="eyebrow mb-4">Заботу о деталях берём на себя</p>
+            <h2 class="editorial section-title">Интерактивный чек-лист <em>сборов в горы</em></h2>
+          </div>
+          <p class="copy">
+            Выберите сценарий поездки, отмечайте собранное и сохраните список.
+            Отметки останутся в этом браузере.
+          </p>
+        </div>
+
+        <div class="reveal-up flex flex-wrap gap-2 mb-7" role="tablist" aria-label="Сценарий поездки" id="scenario-tabs">
+          <button type="button" id="scenario-couple" class="scenario-tab" role="tab"
+                  data-scenario="couple" aria-selected="true" aria-controls="checklist-panel" tabindex="0">Для двоих</button>
+          <button type="button" id="scenario-family" class="scenario-tab" role="tab"
+                  data-scenario="family" aria-selected="false" aria-controls="checklist-panel" tabindex="-1">Семья с детьми</button>
+          <button type="button" id="scenario-pet" class="scenario-tab" role="tab"
+                  data-scenario="pet" aria-selected="false" aria-controls="checklist-panel" tabindex="-1">С питомцем</button>
+          <button type="button" id="scenario-work" class="scenario-tab" role="tab"
+                  data-scenario="work" aria-selected="false" aria-controls="checklist-panel" tabindex="-1">Workation</button>
+        </div>
+
+        <div id="checklist-panel" role="tabpanel" aria-labelledby="scenario-couple" tabindex="0">
+          <p id="checklist-note" class="copy mb-6"></p>
+          <div id="checklist-columns" class="grid md:grid-cols-3 gap-5"></div>
+        </div>
+
+        <div class="reveal-up card mt-6 p-5 md:p-7 flex flex-col lg:flex-row gap-6 lg:items-center justify-between">
+          <div class="flex-1 max-w-lg">
+            <div class="flex justify-between gap-4 mb-3 text-xs font-bold">
+              <span>До поездки — несколько приятных мелочей</span>
+              <span id="checklist-progress-label" class="text-primary whitespace-nowrap" aria-live="polite">0 / 9</span>
+            </div>
+            <progress id="checklist-progress" value="0" max="9" aria-label="Прогресс сборов"></progress>
+            <p class="text-xs text-on-surface-variant mt-3">
+              Постельное бельё, полотенца, посуда и фен уже ждут в шале.
+            </p>
+          </div>
+          <button type="button" id="export-checklist" class="btn btn-primary">
+            <span class="material-symbols-outlined text-lg" aria-hidden="true">ios_share</span>
+            Отправить список в Telegram / Скопировать
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking-module" class="section-space bg-surface">
+      <div class="shell">
+        <div class="reveal-up max-w-3xl mb-10">
+          <p class="eyebrow mb-4">Лучшая поездка начинается с простого</p>
+          <h2 class="editorial section-title">Прямое бронирование <em>без посредников</em></h2>
+          <p class="copy mt-5">
+            Соберите свой отдых. Расчёт прозрачен: проживание со скидкой 10%
+            и только те дополнительные ритуалы, которые вы выбрали.
+          </p>
+        </div>
+
+        <form id="booking-form" class="reveal-up grid lg:grid-cols-[1.15fr_.85fr] gap-6 items-start">
+          <div class="card p-5 md:p-8">
+            <h3 class="editorial text-3xl mb-6">Даты для <em>вашей перезагрузки</em></h3>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="booking-arrival" class="field-label">Дата заезда</label>
+                <input id="booking-arrival" name="arrival" data-field class="field" type="date" required>
+              </div>
+              <div>
+                <label for="booking-departure" class="field-label">Дата выезда</label>
+                <input id="booking-departure" name="departure" data-field class="field" type="date" required>
+              </div>
+              <div>
+                <label for="booking-house" class="field-label">Тип дома</label>
+                <select id="booking-house" name="house" data-field class="field">
+                  <option value="aframe">A-Frame «Пихта» · до 4 гостей</option>
+                  <option value="barn">Барнхаус «Плато» · до 4 гостей</option>
+                  <option value="sphere">Сфера «Орион» · до 2 гостей</option>
+                </select>
+              </div>
+              <div>
+                <label for="booking-guests" class="field-label">Количество гостей</label>
+                <select id="booking-guests" name="guests" data-field class="field">
+                  <option value="2">2 гостя</option>
+                  <option value="3">3 гостя</option>
+                  <option value="4">4 гостя</option>
+                </select>
+              </div>
+            </div>
+
+            <fieldset class="mt-8 min-w-0">
+              <legend class="editorial text-3xl mb-4">Добавить <em>впечатления</em></legend>
+              <div class="grid gap-3">
+                <label class="addon">
+                  <input type="checkbox" name="hotTub" data-service="hotTub">
+                  <span class="min-w-0">
+                    <span class="block text-xs font-bold">Горячий пихтовый чан</span>
+                    <span class="block text-[11px] text-on-surface-variant mt-1">Один сеанс · подготовка и травяной чай</span>
+                  </span>
+                  <span class="addon-price">+ 6 500 ₽</span>
+                </label>
+                <label class="addon">
+                  <input type="checkbox" name="sauna" data-service="sauna">
+                  <span class="min-w-0">
+                    <span class="block text-xs font-bold">Банный ритуал</span>
+                    <span class="block text-[11px] text-on-surface-variant mt-1">Один сеанс · время по согласованию</span>
+                  </span>
+                  <span class="addon-price">+ 4 500 ₽</span>
+                </label>
+                <label class="addon">
+                  <input type="checkbox" name="projector" data-service="projector">
+                  <span class="min-w-0">
+                    <span class="block text-xs font-bold">Проектор для киновечера</span>
+                    <span class="block text-[11px] text-on-surface-variant mt-1">Комплект на период проживания</span>
+                  </span>
+                  <span class="addon-price">+ 1 500 ₽</span>
+                </label>
+                <label class="addon">
+                  <input type="checkbox" name="pet" data-service="pet">
+                  <span class="min-w-0">
+                    <span class="block text-xs font-bold">Путешествие с питомцем</span>
+                    <span class="block text-[11px] text-on-surface-variant mt-1">Один питомец · доп. уборка за весь заезд</span>
+                  </span>
+                  <span class="addon-price">+ 2 000 ₽</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <p class="copy text-xs mt-5">
+              Питомца и время SPA согласуем до подтверждения.
+              Дополнительные услуги оплачиваются один раз за выбранный заезд, а не за каждую ночь.
+            </p>
+          </div>
+
+          <aside id="quote-card" class="card card-tint p-5 md:p-8 lg:sticky lg:top-28" aria-label="Предварительный расчёт">
+            <p class="eyebrow mb-5">Ваш горный побег</p>
+            <h3 id="quote-house" class="editorial text-4xl mb-2">A-Frame «Пихта»</h3>
+            <p id="quote-dates" class="text-xs text-on-surface-variant"></p>
+            <p id="quote-guests" class="text-xs text-on-surface-variant mt-1"></p>
+
+            <dl class="mt-7 space-y-4 text-xs">
+              <div class="flex items-start justify-between gap-4">
+                <dt id="quote-lodging-label" class="text-on-surface-variant"></dt>
+                <dd id="quote-lodging" class="font-bold price"></dd>
+              </div>
+              <div class="flex items-start justify-between gap-4 text-primary">
+                <dt>Прямое бронирование · −10%</dt>
+                <dd id="quote-discount" class="font-bold price"></dd>
+              </div>
+            </dl>
+
+            <dl id="quote-extras" class="mt-4 space-y-3 text-xs"></dl>
+
+            <div class="mt-6 pt-6 border-t border-outline-variant/50">
+              <div class="flex flex-wrap items-end justify-between gap-3">
+                <span class="text-sm font-bold">Итого за отдых</span>
+                <strong id="quote-total" class="text-3xl md:text-4xl font-semibold price"
+                        aria-live="polite" aria-atomic="true"></strong>
+              </div>
+              <p class="text-xs text-on-surface-variant mt-3">
+                Скидка применяется к проживанию. Сборов сайта и комиссии за заявку нет.
+              </p>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full mt-7">
+              Забронировать со скидкой 10%
+              <span class="material-symbols-outlined text-lg" aria-hidden="true">north_east</span>
+            </button>
+
+            <div class="flex items-start gap-2 mt-4 text-[11px] text-on-surface-variant">
+              <span class="material-symbols-outlined text-base" aria-hidden="true">info</span>
+              <p>
+                Предварительный расчёт по презентационным тарифам.
+                Заявка не блокирует даты: доступность и окончательные условия подтверждает консьерж.
+              </p>
+            </div>
+          </aside>
+        </form>
+      </div>
+    </section>
+
+    <!-- LOGISTICS -->
+    <section id="logistics" class="section-space bg-surface-container-low">
+      <div class="shell">
+        <div class="reveal-up max-w-3xl mb-10">
+          <p class="eyebrow mb-4">Путь — часть путешествия</p>
+          <h2 class="editorial section-title">Комфортный маршрут <em>без бездорожья</em></h2>
+          <p class="copy mt-5">
+            Плато Лаго-Наки, хребет Азиш-Тау, район станицы Даховской.
+            На границе Краснодарского края и Адыгеи.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-[.85fr_1.15fr] gap-6">
+          <div class="grid gap-5">
+            <article class="card p-6 md:p-7 reveal-up">
+              <span class="material-symbols-outlined text-primary text-3xl mb-4" aria-hidden="true">directions_car</span>
+              <h3 class="editorial text-3xl mb-3">На машине — <em>к новым видам</em></h3>
+              <p class="copy">
+                Ориентир — 2,5 часа от Краснодара по живописному ровному асфальту
+                через Майкоп и станицу Даховскую. 100% асфальтированный подъём
+                без грунтовок и бездорожья, доступный для седана с низким клиренсом.
+              </p>
+              <p class="text-xs text-on-surface-variant mt-4">
+                Время зависит от точки выезда, трафика и погоды.
+                Зимой перед поездкой уточните состояние подъёма и требования к шинам.
+              </p>
+            </article>
+
+            <article class="card p-6 md:p-7 reveal-up delay-100">
+              <span class="material-symbols-outlined text-primary text-3xl mb-4" aria-hidden="true">train</span>
+              <h3 class="editorial text-3xl mb-3">Дальше — <em>с нашей заботой</em></h3>
+              <p class="copy">
+                Скоростная «Ласточка» до Майкопа или прилёт в аэропорт Краснодар / Сочи.
+                На вокзале или в аэропорту вас встретит персональный трансфер
+                на полноприводном минивэне Mercedes-Benz V-Class.
+              </p>
+              <p class="text-xs text-on-surface-variant mt-4">
+                Расписание, доступность аэропортов, стоимость и автомобиль
+                подтвердите с консьержем перед покупкой билетов.
+              </p>
+              <a href="#booking-module" class="inline-flex items-center gap-2 text-xs font-bold text-primary mt-5">
+                Обсудить трансфер
+                <span class="material-symbols-outlined text-base" aria-hidden="true">arrow_forward</span>
+              </a>
+            </article>
+          </div>
+
+          <div class="card overflow-hidden relative reveal-up delay-200">
+            <iframe class="map-frame"
+                    title="Интерактивная Яндекс.Карта: точка на плато Лаго-Наки, хребет Азиш-Тау"
+                    src="https://yandex.ru/map-widget/v1/?ll=40.024500%2C44.128400&amp;z=11&amp;pt=40.024500,44.128400,pm2rdm"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="absolute inset-x-4 bottom-4 rounded-xl border border-outline-variant/40 bg-surface/95 p-5 backdrop-blur-md shadow-lg">
+              <p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-2">Точка встречи с горами</p>
+              <p class="font-editorial text-3xl font-semibold">44.1284° N, 40.0245° E</p>
+              <p class="text-xs text-on-surface-variant mt-2 mb-4">Плато Лаго-Наки · хребет Азиш-Тау</p>
+
+              <a class="btn btn-primary w-full"
+                 href="yandexnavi://build_route_on_map?lat_to=44.128400&amp;lon_to=40.024500">
+                <span class="material-symbols-outlined text-lg" aria-hidden="true">navigation</span>
+                Построить маршрут в Яндекс.Навигаторе
+              </a>
+
+              <a class="block mt-3 text-center text-xs font-semibold underline underline-offset-4"
+                 href="https://yandex.ru/maps/?rtext=~44.128400%2C40.024500&amp;rtt=auto&amp;z=11"
+                 target="_blank" rel="noopener noreferrer">
+                Нет приложения? Открыть маршрут в браузере
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section-space bg-surface">
+      <div class="shell grid lg:grid-cols-[.75fr_1.25fr] gap-10 lg:gap-16 items-start">
+        <div class="reveal-up lg:sticky lg:top-28">
+          <p class="eyebrow mb-4">Осталось только собраться</p>
+          <h2 class="editorial section-title">Ответы консьержа на <em>частые вопросы</em></h2>
+          <p class="copy mt-6">
+            У каждого путешествия свои детали. Поможем выбрать дом,
+            согласовать трансфер и подготовить небольшой сюрприз.
+          </p>
+          <a href="#booking-module" class="btn btn-outline mt-6">+7 (999) 000-00-00</a>
+        </div>
+
+        <div class="grid gap-3">
+          <details class="reveal-up">
+            <summary><h3 class="m-0 text-sm font-bold">Будет ли тепло <em class="font-editorial text-2xl text-primary">зимой</em>?</h3></summary>
+            <p class="copy pb-6">
+              В концепции каждого шале предусмотрены отопление и тёплые полы.
+              Возьмите удобную обувь для снега и тёплый слой для прогулок:
+              на высоте погода меняется быстрее, чем в городе.
+            </p>
+          </details>
+
+          <details class="reveal-up">
+            <summary><h3 class="m-0 text-sm font-bold">Можно ли приехать <em class="font-editorial text-2xl text-primary">с детьми</em>?</h3></summary>
+            <p class="copy pb-6">
+              Да. A-Frame «Пихта» и барнхаус «Плато» рассчитаны максимум на четырёх гостей.
+              Укажите всех проживающих, включая детей. Потребность в детской кроватке
+              и особенности размещения согласуйте заранее.
+            </p>
+          </details>
+
+          <details class="reveal-up">
+            <summary><h3 class="m-0 text-sm font-bold">А если с нами <em class="font-editorial text-2xl text-primary">питомец</em>?</h3></summary>
+            <p class="copy pb-6">
+              Добавьте питомца в расчёт и сообщите его вид, размер и особенности консьержу.
+              Размещение подтверждается индивидуально. На общей территории
+              питомец должен быть под вашим присмотром.
+            </p>
+          </details>
+
+          <details class="reveal-up">
+            <summary><h3 class="m-0 text-sm font-bold">Когда подготовят <em class="font-editorial text-2xl text-primary">горячий чан</em>?</h3></summary>
+            <p class="copy pb-6">
+              К заранее согласованному времени. Отметьте услугу при бронировании:
+              подготовка требует времени и зависит от погоды.
+              Продолжительность сеанса и состав запарки уточним до подтверждения.
+            </p>
+          </details>
+
+          <details class="reveal-up">
+            <summary><h3 class="m-0 text-sm font-bold">Подойдёт ли место для <em class="font-editorial text-2xl text-primary">работы</em>?</h3></summary>
+            <p class="copy pb-6">
+              Для спокойной работы — да. Если важны видеозвонки или большой объём загрузок,
+              перед поездкой уточните фактическую связь и Wi-Fi в выбранном доме.
+              Скорость интернета в горной местности может меняться.
+            </p>
+          </details>
+
+          <details class="reveal-up">
+            <summary><h3 class="m-0 text-sm font-bold">Как подтверждается <em class="font-editorial text-2xl text-primary">бронь</em>?</h3></summary>
+            <p class="copy pb-6">
+              В режиме мессенджера вы отправляете заявку с расчётом.
+              Консьерж проверяет доступность и присылает условия подтверждения,
+              оплаты и отмены. Отправка заявки сама по себе не резервирует даты.
+              Вкладка PMS на этой странице показывает демонстрационный сценарий.
+            </p>
+          </details>
+
+          <details class="reveal-up">
+            <summary><h3 class="m-0 text-sm font-bold">В чём преимущество <em class="font-editorial text-2xl text-primary">прямой заявки</em>?</h3></summary>
+            <p class="copy pb-6">
+              Калькулятор уменьшает базовую стоимость проживания на 10%.
+              Дополнительные услуги считаются отдельно. Сравнение выполнено
+              с базовым тарифом для агрегаторов, а не с текущими акциями на Авито или Суточно.
+              Фактические тарифы и условия подтверждаются при бронировании.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL INVITATION -->
+    <section class="py-16 md:py-24 bg-surface-container-low border-y border-outline-variant/25">
+      <div class="shell text-center reveal-up">
+        <p class="eyebrow justify-center mb-5">Место для вашей паузы</p>
+        <h2 class="editorial section-title max-w-3xl mx-auto">Оставьте суету <em>ниже облаков</em></h2>
+        <p class="copy mt-5 max-w-xl mx-auto">Выберите даты. Всё остальное начнём с одного спокойного разговора.</p>
+        <a href="#booking-module" class="btn btn-primary mt-7">Спланировать поездку</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-surface py-12">
+    <div class="shell">
+      <div class="grid md:grid-cols-2 lg:grid-cols-[1.2fr_.7fr_1fr] gap-9 pb-10">
+        <div>
+          <a href="#home" class="brand-name text-primary inline-block">ПИХТА &amp; ПЛАТО</a>
+          <p class="brand-caption mt-2">Горный бутик-глэмпинг в Лаго-Наки</p>
+          <p class="copy mt-5 max-w-sm">Шале с характером. Горы за окном. Время, которое снова принадлежит вам.</p>
+          <a href="#booking-module" class="inline-block text-sm font-bold mt-5">+7 (999) 000-00-00</a>
+          <p class="text-xs text-on-surface-variant mt-1">Консьерж · вопросы и предварительные заявки</p>
+        </div>
+
+        <nav aria-label="Навигация в подвале" class="grid content-start gap-3 text-xs font-semibold">
+          <a href="#concept">О концепции</a>
+          <a href="#houses-catalog">Коллекция домов</a>
+          <a href="#spa-rituals">SPA &amp; Чан</a>
+          <a href="#checklist">Чек-лист сборов</a>
+          <a href="#booking-module">Прямое бронирование</a>
+          <a href="#logistics">Как добраться</a>
+          <a href="#faq">Частые вопросы</a>
+        </nav>
+
+        <div class="text-xs text-on-surface-variant leading-relaxed">
+          <p class="text-on-surface font-bold mb-3">ООО «ПИХТА ПЛАТО РЕЗОРТ»</p>
+          <address class="not-italic">
+            Республика Адыгея / Краснодарский край,<br>
+            Майкопский р-н, ст. Даховская,<br>
+            пер. Горный, 14
+          </address>
+          <p class="mt-4">44.1284° N, 40.0245° E</p>
+          <p class="mt-4">
+            Контакты гостя не сохраняются на сервере этой страницы.
+            Передача заявки происходит в выбранном вами мессенджере.
+          </p>
+        </div>
+      </div>
+
+      <div class="border-t border-outline-variant/35 pt-6 grid md:grid-cols-[.7fr_1.3fr] gap-4 text-[10px] text-on-surface-variant">
+        <p>© 2026 ПИХТА &amp; ПЛАТО. Все права защищены.</p>
+        <p>
+          Презентационная концепция. Фотографии иллюстративные, тарифы демонстрационные.
+          Контакты, реквизиты, география услуг и условия проживания требуют подтверждения владельцем.
+          Онлайн-оплата не подключена. Информация не является публичной офертой.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE MENU -->
+  <dialog id="mobile-menu" class="mobile-dialog" aria-labelledby="mobile-menu-title">
+    <div class="p-6 flex flex-col min-h-full">
+      <div class="flex items-center justify-between gap-4 mb-9">
+        <div>
+          <p id="mobile-menu-title" class="brand-name text-primary">ПИХТА &amp; ПЛАТО</p>
+          <p class="brand-caption">Горный бутик-глэмпинг в Лаго-Наки</p>
+        </div>
+        <button type="button" class="icon-button shrink-0" data-close-dialog="mobile-menu" aria-label="Закрыть меню">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+
+      <nav aria-label="Мобильная навигация" class="grid gap-1">
+        <a href="#concept" class="py-3 border-b border-outline-variant/25 font-editorial text-3xl font-semibold">О концепции</a>
+        <a href="#houses-catalog" class="py-3 border-b border-outline-variant/25 font-editorial text-3xl font-semibold">Коллекция домов</a>
+        <a href="#spa-rituals" class="py-3 border-b border-outline-variant/25 font-editorial text-3xl font-semibold">SPA &amp; Чан</a>
+        <a href="#checklist" class="py-3 border-b border-outline-variant/25 font-editorial text-3xl font-semibold">Чек-лист сборов</a>
+        <a href="#logistics" class="py-3 border-b border-outline-variant/25 font-editorial text-3xl font-semibold">Как добраться</a>
+        <a href="#faq" class="py-3 font-editorial text-3xl font-semibold">Частые вопросы</a>
+      </nav>
+
+      <div class="mt-auto pt-9">
+        <p class="field-label mb-3">Ваше настроение</p>
+        <div class="theme-toggle" role="group" aria-label="Цветовая тема в мобильном меню">
+          <button type="button" data-theme-choice="light" aria-pressed="true">
+            <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+            Утро · Light
+          </button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">
+            <span class="material-symbols-outlined" aria-hidden="true">dark_mode</span>
+            Ночь · Dark
+          </button>
+        </div>
+
+        <a href="#booking-module" class="block font-bold text-lg mt-6">+7 (999) 000-00-00</a>
+        <p class="text-xs text-on-surface-variant mt-1">Ваш консьерж в горах</p>
+        <a href="#booking-module" class="btn btn-primary w-full mt-6">Выбрать даты со скидкой 10%</a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- BOOKING MODAL -->
+  <dialog id="booking-dialog" class="booking-dialog" aria-labelledby="booking-dialog-title">
+    <div class="p-5 md:p-8">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="eyebrow mb-3">ПИХТА &amp; ПЛАТО</p>
+          <h2 id="booking-dialog-title" class="editorial text-4xl md:text-5xl">Ваш отдых <em>начинается здесь</em></h2>
+        </div>
+        <button type="button" class="icon-button shrink-0" data-close-dialog="booking-dialog" aria-label="Закрыть окно бронирования">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+
+      <div id="booking-tabs" class="grid sm:grid-cols-2 gap-3 mt-7 mb-6" role="tablist" aria-label="Способ бронирования">
+        <button id="messenger-tab" class="modal-tab" type="button" role="tab"
+                aria-selected="true" aria-controls="messenger-panel" tabindex="0">
+          Быстрая бронь через мессенджер
+          <span class="block text-[10px] text-primary mt-1">0% комиссии сайта</span>
+        </button>
+        <button id="pms-tab" class="modal-tab" type="button" role="tab"
+                aria-selected="false" aria-controls="pms-panel" tabindex="-1">
+          Онлайн-оплата СБП / Картой
+          <span class="block text-[10px] text-primary mt-1">Модуль PMS · демонстрация</span>
+        </button>
+      </div>
+
+      <section id="messenger-panel" role="tabpanel" aria-labelledby="messenger-tab" tabindex="0">
+        <div class="card card-tint p-5">
+          <div class="flex flex-wrap justify-between items-start gap-3 mb-5">
+            <div>
+              <h3 id="modal-house" class="editorial text-3xl"></h3>
+              <p id="modal-dates" class="text-xs text-on-surface-variant mt-2"></p>
+              <p id="modal-guests" class="text-xs text-on-surface-variant mt-1"></p>
+            </div>
+            <span class="rounded-full bg-primary/10 text-primary px-3 py-1 text-[10px] font-bold">ПРЯМОЙ ТАРИФ</span>
+          </div>
+
+          <dl class="space-y-3 text-xs">
+            <div class="flex justify-between gap-4">
+              <dt class="text-on-surface-variant">Проживание до скидки</dt>
+              <dd id="modal-lodging" class="font-bold price"></dd>
+            </div>
+            <div class="flex justify-between gap-4 text-primary">
+              <dt>Ваша экономия · 10%</dt>
+              <dd id="modal-discount" class="font-bold price"></dd>
+            </div>
+          </dl>
+          <dl id="modal-extras" class="space-y-3 text-xs mt-3"></dl>
+
+          <div class="border-t border-outline-variant/40 mt-5 pt-5 flex flex-wrap justify-between items-end gap-3">
+            <span class="text-sm font-bold">Итого по расчёту</span>
+            <strong id="modal-total" class="text-3xl font-semibold price"></strong>
+          </div>
+          <p class="text-[10px] text-on-surface-variant mt-3">
+            Экономия рассчитана относительно базового тарифа для агрегаторов Авито / Суточно.
+            Дополнительные услуги без скидки.
+          </p>
+        </div>
+
+        <form id="request-form" class="mt-6">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label for="guest-name" class="field-label">Как к вам обращаться</label>
+              <input class="field" id="guest-name" name="guestName" autocomplete="given-name"
+                     placeholder="Ваше имя" minlength="2" maxlength="80" required>
+            </div>
+            <div>
+              <label for="guest-phone" class="field-label">Телефон для ответа</label>
+              <input class="field" id="guest-phone" name="guestPhone" type="tel" autocomplete="tel"
+                     inputmode="tel" placeholder="+7 …" maxlength="24" required>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-3 mt-5">
+            <button type="submit" name="channel" value="whatsapp" class="btn btn-primary">
+              Скопировать заявку для WhatsApp
+            </button>
+            <button type="submit" name="channel" value="telegram" class="btn btn-outline">
+              Отправить заявку в Telegram
+            </button>
+          </div>
+
+          <button type="button" id="copy-quote" class="btn btn-outline w-full mt-3">
+            <span class="material-symbols-outlined text-lg" aria-hidden="true">content_copy</span>
+            Скопировать расчёт
+          </button>
+
+          <p class="text-[11px] text-on-surface-variant mt-4">
+            Контакт консьержа пока не подключён: кнопка WhatsApp копирует текст заявки.
+            Telegram предложит выбрать чат: отправьте текст самостоятельно или сохраните в «Избранном».
+            Сообщение отправляете вы в приложении. Бронь подтверждается после проверки дат.
+          </p>
+          <p class="text-[10px] text-on-surface-variant mt-3">
+            Имя и телефон не сохраняются этой страницей. При отправке вы самостоятельно
+            передаёте их выбранному мессенджеру и получателю заявки.
+          </p>
+        </form>
+      </section>
+
+      <section id="pms-panel" role="tabpanel" aria-labelledby="pms-tab" tabindex="0" hidden>
+        <!-- ШЛЮЗ ИНТЕГРАЦИИ PMS: Bnovo / TravelLine / RealtyCalendar -->
+        <div class="rounded-xl border border-primary/40 bg-primary/10 p-4">
+          <p class="text-xs font-bold text-primary">Демонстрационный режим · реальные деньги не списываются</p>
+          <p class="text-xs text-on-surface-variant mt-2">
+            Здесь показан интерфейс будущей интеграции. Проверка доступности,
+            удержание дат, платёж и подтверждение брони появятся после подключения PMS.
+          </p>
+        </div>
+
+        <div class="card p-5 mt-5">
+          <div class="flex flex-wrap justify-between items-center gap-3 mb-4">
+            <h3 class="editorial text-3xl">Ваши <em>выбранные даты</em></h3>
+            <span class="text-[10px] text-on-surface-variant">Выбор гостя, не проверка наличия</span>
+          </div>
+          <p id="pms-stay" class="text-xs text-on-surface-variant mb-4"></p>
+          <div id="pms-calendar" class="grid grid-cols-7 gap-1.5" aria-label="Демонстрационное отображение выбранного периода"></div>
+
+          <ol class="grid sm:grid-cols-3 gap-3 mt-5 text-[11px] text-on-surface-variant">
+            <li class="rounded-lg bg-surface-container-low p-3">01 · Проверка дат в PMS</li>
+            <li class="rounded-lg bg-surface-container-low p-3">02 · Предоплата через провайдера</li>
+            <li class="rounded-lg bg-surface-container-low p-3">03 · Подтверждение в шахматке</li>
+          </ol>
+        </div>
+
+        <div class="card card-tint p-5 mt-5">
+          <p class="text-xs text-on-surface-variant">Предоплата 30% от расчёта</p>
+          <p id="pms-deposit" class="text-4xl font-semibold price mt-2"></p>
+          <p id="pms-remainder" class="text-xs text-on-surface-variant mt-2"></p>
+
+          <fieldset class="mt-5">
+            <legend class="field-label">Способ оплаты в демосценарии</legend>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <label class="flex items-center gap-3 rounded-lg border border-outline-variant/50 p-4 cursor-pointer">
+                <input type="radio" name="payment-method" value="sbp" checked>
+                <span class="text-sm font-bold">СБП</span>
+              </label>
+              <label class="flex items-center gap-3 rounded-lg border border-outline-variant/50 p-4 cursor-pointer">
+                <input type="radio" name="payment-method" value="mir">
+                <span class="text-sm font-bold">Карта «Мир»</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="button" id="demo-payment" class="btn btn-primary w-full mt-5">
+            Показать сценарий оплаты
+          </button>
+          <p id="demo-payment-status" class="text-xs text-on-surface-variant mt-4" role="status" hidden></p>
+        </div>
+
+        <p class="text-[11px] text-on-surface-variant mt-4">
+          Для запуска: серверная проверка цены и доступности → создание брони в PMS →
+          платёжная сессия → проверенный webhook → подтверждение в шахматке.
+          Секретные API-ключи не должны находиться в HTML.
+        </p>
+      </section>
+    </div>
+  </dialog>
+
+  <button type="button" id="back-to-top" aria-label="Вернуться к началу страницы" title="Наверх"><span class="material-symbols-outlined" aria-hidden="true">north</span></button>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+    <div class="flex items-start justify-between gap-3">
+      <div class="min-w-0">
+        <p id="toast-message" class="text-xs font-semibold"></p>
+        <a id="toast-action" class="inline-block text-xs font-bold text-primary underline underline-offset-4 mt-2"
+           target="_blank" rel="noopener noreferrer" hidden></a>
+      </div>
+      <button type="button" id="toast-close" aria-label="Закрыть уведомление"
+              class="shrink-0 text-on-surface-variant p-1">
+        <span class="material-symbols-outlined text-lg" aria-hidden="true">close</span>
+      </button>
+    </div>
+  </div>
+
+  <noscript>
+    <div style="padding:20px;background:#FCE8D5;color:#522500;text-align:center">
+      Для калькулятора, звука, тем и экспорта списка включите JavaScript.
+      Контакты консьержа будут доступны после запуска проекта.
+    </div>
+  </noscript>
+
+  <script>
+    "use strict";
+
+    /* Настройки презентации. Перед публикацией подтвердите данные владельцем. */
+    const CONFIG = {
+      whatsapp: "79990000000",
+      discountRate: 0.10,
+      depositRate: 0.30,
+      mapURL: "https://yandex.ru/maps/?ll=40.024500%2C44.128400&z=11&pt=40.024500,44.128400,pm2rdm"
+    };
+
+    const HOUSES = {
+      aframe: { name: "A-Frame «Пихта»", nightly: 12900, capacity: 4 },
+      barn: { name: "Барнхаус «Плато»", nightly: 15900, capacity: 4 },
+      sphere: { name: "Сфера «Орион»", nightly: 10900, capacity: 2 }
+    };
+
+    const SERVICES = {
+      hotTub: { name: "Горячий пихтовый чан · 1 сеанс", price: 6500 },
+      sauna: { name: "Банный ритуал · 1 сеанс", price: 4500 },
+      projector: { name: "Проектор · на весь заезд", price: 1500 },
+      pet: { name: "Размещение с питомцем · весь заезд", price: 2000 }
+    };
+
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const money = value =>
+      new Intl.NumberFormat("ru-RU", {
+        style: "currency",
+        currency: "RUB",
+        maximumFractionDigits: 0
+      }).format(value);
+
+    function plural(number, forms) {
+      const n = Math.abs(number) % 100;
+      const last = n % 10;
+      if (n > 10 && n < 20) return forms[2];
+      if (last === 1) return forms[0];
+      if (last >= 2 && last <= 4) return forms[1];
+      return forms[2];
+    }
+
+    /* Даты считаются в локальном календаре устройства, без сдвига UTC. */
+    function localISO(date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
+    }
+
+    function dateFromISO(value) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+      const [year, month, day] = value.split("-").map(Number);
+      if (year < 2000 || year > 9999) return null;
+      const date = new Date(year, month - 1, day, 12);
+      return localISO(date) === value ? date : null;
+    }
+
+    function shiftISO(value, days) {
+      const date = dateFromISO(value);
+      if (!date) return "";
+      date.setDate(date.getDate() + days);
+      return localISO(date);
+    }
+
+    function dayNumber(value) {
+      const date = dateFromISO(value);
+      if (!date) return NaN;
+      return Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86400000;
+    }
+
+    function formatDate(value) {
+      const date = dateFromISO(value);
+      return date
+        ? new Intl.DateTimeFormat("ru-RU", {
+            day: "numeric", month: "long", year: "numeric"
+          }).format(date)
+        : "Дата не выбрана";
+    }
+
+    function tomorrowISO() {
+      const now = new Date();
+      now.setDate(now.getDate() + 1);
+      return localISO(now);
+    }
+
+    const initialToday = localISO(new Date());
+
+    const bookingState = {
+      arrival: shiftISO(initialToday, 1),
+      departure: shiftISO(initialToday, 3),
+      house: "aframe",
+      guests: 2,
+      extras: new Set()
+    };
+
+    const quickForm = $("#quick-form");
+    const bookingForm = $("#booking-form");
+    const bookingDialog = $("#booking-dialog");
+    const mobileMenu = $("#mobile-menu");
+    let bookingSnapshot = null;
+
+    /* Уведомления и буфер обмена. */
+    let toastTimer;
+
+    function showToast(message, action = null) {
+      clearTimeout(toastTimer);
+      $("#toast-message").textContent = message;
+      const link = $("#toast-action");
+      link.hidden = !action;
+      if (action) {
+        link.textContent = action.label;
+        link.href = action.url;
+      } else {
+        link.removeAttribute("href");
+        link.textContent = "";
+      }
+      $("#toast").hidden = false;
+      toastTimer = setTimeout(() => {
+        $("#toast").hidden = true;
+      }, action ? 14000 : 6500);
+    }
+
+    $("#toast-close").addEventListener("click", () => {
+      clearTimeout(toastTimer);
+      $("#toast").hidden = true;
+    });
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return true;
+        } catch {}
+      }
+
+      const previousFocus = document.activeElement;
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.readOnly = true;
+      textarea.style.cssText =
+        "position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;font-size:16px;";
+
+      /* В открытом dialog копирующий элемент должен быть внутри него. */
+      const host = document.querySelector("dialog[open]") || document.body;
+      host.append(textarea);
+
+      let copied = false;
+      try {
+        textarea.focus();
+        textarea.select();
+        textarea.setSelectionRange(0, textarea.value.length);
+        copied = document.execCommand("copy");
+      } catch {}
+      textarea.remove();
+
+      if (previousFocus instanceof HTMLElement) {
+        previousFocus.focus({ preventScroll: true });
+      }
+      return copied;
+    }
+
+    function publicShareURL() {
+      if (location.protocol === "https:" || location.protocol === "http:") {
+        const url = new URL(location.href);
+        url.hash = "";
+        url.search = "";
+        url.username = "";
+        url.password = "";
+        return url.toString();
+      }
+      return CONFIG.mapURL;
+    }
+
+    function telegramURL(text) {
+      return "https://t.me/share/url?url=" +
+        encodeURIComponent(publicShareURL()) +
+        "&text=" + encodeURIComponent(text);
+    }
+
+    function scrollToBooking() {
+      $("#booking-module").scrollIntoView({
+        behavior: reducedMotion.matches ? "auto" : "smooth",
+        block: "start"
+      });
+      const card = $("#quote-card");
+      card.classList.remove("quote-flash");
+      void card.offsetWidth;
+      card.classList.add("quote-flash");
+    }
+
+    /* Темизация. HEX-переменные и RGB-каналы меняются одной темой. */
+    function applyTheme(theme, persist = true) {
+      if (theme !== "light" && theme !== "dark") return;
+      document.documentElement.dataset.theme = theme;
+
+      $$("[data-theme-choice]").forEach(button => {
+        button.setAttribute(
+          "aria-pressed",
+          String(button.dataset.themeChoice === theme)
+        );
+      });
+
+      $("#browser-theme-color").content =
+        theme === "dark" ? "#0E1513" : "#F6F3EC";
+
+      if (persist) {
+        try { localStorage.setItem("pihta-theme", theme); } catch {}
+      }
+    }
+
+    $$("[data-theme-choice]").forEach(button => {
+      button.addEventListener("click", () =>
+        applyTheme(button.dataset.themeChoice)
+      );
+    });
+
+    applyTheme(document.documentElement.dataset.theme, false);
+
+    window.addEventListener("storage", event => {
+      if (event.key === "pihta-theme") applyTheme(event.newValue, false);
+    });
+
+    /* Нативные dialog: фокус, Escape, закрытие по подложке. */
+    function syncScrollLock() {
+      document.body.classList.toggle(
+        "modal-open", Boolean(document.querySelector("dialog[open]"))
+      );
+      $("#menu-button").setAttribute("aria-expanded", String(mobileMenu.open));
+    }
+
+    function openDialog(dialog) {
+      if (!dialog.open) dialog.showModal();
+      syncScrollLock();
+    }
+
+    function closeDialog(dialog) {
+      if (dialog.open) dialog.close();
+      syncScrollLock();
+    }
+
+    $("#menu-button").addEventListener("click", () => openDialog(mobileMenu));
+
+    $$("[data-close-dialog]").forEach(button => {
+      button.addEventListener("click", () =>
+        closeDialog(document.getElementById(button.dataset.closeDialog))
+      );
+    });
+
+    $$("dialog").forEach(dialog => {
+      dialog.addEventListener("close", syncScrollLock);
+      dialog.addEventListener("click", event => {
+        if (event.target !== dialog) return;
+        const box = dialog.getBoundingClientRect();
+        const outside =
+          event.clientX < box.left || event.clientX > box.right ||
+          event.clientY < box.top || event.clientY > box.bottom;
+        if (outside) closeDialog(dialog);
+      });
+    });
+
+    $$('a[href^="#"]', mobileMenu).forEach(link => {
+      link.addEventListener("click", event => {
+        const target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+        event.preventDefault();
+        closeDialog(mobileMenu);
+        requestAnimationFrame(() => {
+          target.scrollIntoView({
+            behavior: reducedMotion.matches ? "auto" : "smooth",
+            block: "start"
+          });
+          history.replaceState(null, "", link.getAttribute("href"));
+        });
+      });
+    });
+
+    /* Общая модель двух форм. */
+    function syncForms() {
+      const capacity = HOUSES[bookingState.house].capacity;
+
+      [quickForm, bookingForm].forEach(form => {
+        form.elements.arrival.value = bookingState.arrival;
+        form.elements.arrival.min = tomorrowISO();
+        form.elements.departure.value = bookingState.departure;
+        form.elements.departure.min = shiftISO(bookingState.arrival, 1);
+        form.elements.house.value = bookingState.house;
+
+        [...form.elements.guests.options].forEach(option => {
+          option.disabled = Number(option.value) > capacity;
+        });
+        form.elements.guests.value = String(bookingState.guests);
+      });
+
+      $$("[data-service]", bookingForm).forEach(input => {
+        input.checked = bookingState.extras.has(input.dataset.service);
+      });
+    }
+
+    function readAndSync(form) {
+      const arrivalField = form.elements.arrival;
+      const departureField = form.elements.departure;
+      arrivalField.setCustomValidity("");
+      departureField.setCustomValidity("");
+
+      const arrival = arrivalField.value;
+      let departure = departureField.value;
+
+      if (!dateFromISO(arrival) || !dateFromISO(departure)) return false;
+
+      if (arrival < tomorrowISO()) {
+        arrivalField.setCustomValidity("Выберите дату не раньше завтрашнего дня.");
+        return false;
+      }
+
+      if (dayNumber(departure) <= dayNumber(arrival)) {
+        departure = shiftISO(arrival, 1);
+      }
+
+      const house = Object.hasOwn(HOUSES, form.elements.house.value)
+        ? form.elements.house.value
+        : "aframe";
+
+      const requestedGuests = Number(form.elements.guests.value) || 2;
+      const guests = Math.min(
+        Math.max(2, requestedGuests),
+        HOUSES[house].capacity
+      );
+
+      bookingState.arrival = arrival;
+      bookingState.departure = departure;
+      bookingState.house = house;
+      bookingState.guests = guests;
+
+      syncForms();
+      renderQuote();
+
+      if (requestedGuests !== guests) {
+        showToast("Сфера рассчитана на двоих. Количество гостей изменено на 2.");
+      }
+
+      return form.checkValidity();
+    }
+
+    function calculate(snapshot = bookingState) {
+      const house = HOUSES[snapshot.house];
+      const nights = dayNumber(snapshot.departure) - dayNumber(snapshot.arrival);
+      const extras = [...snapshot.extras].filter(key => Object.hasOwn(SERVICES, key));
+      const lodging = house.nightly * nights;
+      const discount = Math.round(lodging * CONFIG.discountRate);
+      const extrasTotal = extras.reduce((sum, key) => sum + SERVICES[key].price, 0);
+      const total = lodging - discount + extrasTotal;
+      const deposit = Math.round(total * CONFIG.depositRate);
+      return {
+        house, nights, extras, lodging, discount,
+        extrasTotal, total, deposit, remainder: total - deposit
+      };
+    }
+
+    function renderExtraRows(container, keys) {
+      container.replaceChildren();
+
+      if (!keys.length) {
+        const row = document.createElement("div");
+        row.className = "flex justify-between gap-4 text-on-surface-variant";
+        const title = document.createElement("dt");
+        title.textContent = "Дополнительные услуги";
+        const value = document.createElement("dd");
+        value.textContent = "Не выбраны";
+        row.append(title, value);
+        container.append(row);
+        return;
+      }
+
+      keys.forEach(key => {
+        const row = document.createElement("div");
+        row.className = "flex items-start justify-between gap-4";
+        const title = document.createElement("dt");
+        title.className = "text-on-surface-variant";
+        title.textContent = SERVICES[key].name;
+        const value = document.createElement("dd");
+        value.className = "font-bold price";
+        value.textContent = money(SERVICES[key].price);
+        row.append(title, value);
+        container.append(row);
+      });
+    }
+
+    function renderQuote() {
+      const quote = calculate();
+      $("#quote-house").textContent = quote.house.name;
+      $("#quote-dates").textContent =
+        `${formatDate(bookingState.arrival)} — ${formatDate(bookingState.departure)}`;
+      $("#quote-guests").textContent =
+        `${bookingState.guests} ${plural(bookingState.guests, ["гость", "гостя", "гостей"])} · ` +
+        `${quote.nights} ${plural(quote.nights, ["ночь", "ночи", "ночей"])}`;
+      $("#quote-lodging-label").textContent =
+        `${quote.nights} ${plural(quote.nights, ["ночь", "ночи", "ночей"])} × ${money(quote.house.nightly)}`;
+      $("#quote-lodging").textContent = money(quote.lodging);
+      $("#quote-discount").textContent = "−" + money(quote.discount);
+      $("#quote-total").textContent = money(quote.total);
+      renderExtraRows($("#quote-extras"), quote.extras);
+    }
+
+    [quickForm, bookingForm].forEach(form => {
+      form.addEventListener("input", event => {
+        if (event.target.matches('input[type="date"]')) {
+          event.target.setCustomValidity("");
+        }
+      });
+
+      form.addEventListener("change", event => {
+        const input = event.target;
+
+        if (input.matches("[data-service]")) {
+          if (input.checked) bookingState.extras.add(input.dataset.service);
+          else bookingState.extras.delete(input.dataset.service);
+          renderQuote();
+          return;
+        }
+
+        if (input.matches("[data-field]")) {
+          if (!readAndSync(form)) form.reportValidity();
+        }
+      });
+    });
+
+    quickForm.addEventListener("submit", event => {
+      event.preventDefault();
+      if (!readAndSync(quickForm)) {
+        quickForm.reportValidity();
+        return;
+      }
+      scrollToBooking();
+    });
+
+    $$("[data-select-house]").forEach(button => {
+      button.addEventListener("click", () => {
+        bookingState.house = button.dataset.selectHouse;
+        const capacity = HOUSES[bookingState.house].capacity;
+        if (bookingState.guests > capacity) {
+          bookingState.guests = capacity;
+          showToast("Для выбранного дома установлено размещение на двоих.");
+        }
+        syncForms();
+        renderQuote();
+        scrollToBooking();
+      });
+    });
+
+    $("#add-hot-tub").addEventListener("click", () => {
+      bookingState.extras.add("hotTub");
+      syncForms();
+      renderQuote();
+      scrollToBooking();
+      showToast("Пихтовый чан добавлен в ваш расчёт.");
+    });
+
+    syncForms();
+    renderQuote();
+
+    /* Две вкладки бронирования. */
+    function selectBookingTab(tabID, focus = false) {
+      $$("#booking-tabs [role='tab']").forEach(tab => {
+        const active = tab.id === tabID;
+        tab.setAttribute("aria-selected", String(active));
+        tab.tabIndex = active ? 0 : -1;
+        document.getElementById(tab.getAttribute("aria-controls")).hidden = !active;
+        if (active && focus) tab.focus();
+      });
+    }
+
+    $$("#booking-tabs [role='tab']").forEach(tab => {
+      tab.addEventListener("click", () => selectBookingTab(tab.id));
+    });
+
+    function installTabKeyboard(container, selector, activate) {
+      container.addEventListener("keydown", event => {
+        if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+        const tabs = $$(selector, container);
+        const current = tabs.indexOf(event.target);
+        if (current < 0) return;
+        event.preventDefault();
+
+        let next = current;
+        if (event.key === "Home") next = 0;
+        else if (event.key === "End") next = tabs.length - 1;
+        else next = (current + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+
+        activate(tabs[next]);
+        tabs[next].focus();
+      });
+    }
+
+    installTabKeyboard($("#booking-tabs"), "[role='tab']", tab =>
+      selectBookingTab(tab.id)
+    );
+
+    function renderDemoCalendar(snapshot) {
+      const calendar = $("#pms-calendar");
+      calendar.replaceChildren();
+
+      for (let i = 0; i < 7; i++) {
+        const iso = shiftISO(snapshot.arrival, i);
+        const date = dateFromISO(iso);
+        const selected = dayNumber(iso) < dayNumber(snapshot.departure);
+        const cell = document.createElement("div");
+        cell.className = "demo-day" + (selected ? " selected" : "");
+        cell.title = `${formatDate(iso)} — ${selected ? "выбрано гостем" : "доступность не проверена"}`;
+
+        const weekday = document.createElement("span");
+        weekday.className = "block text-[9px] text-on-surface-variant";
+        weekday.textContent = new Intl.DateTimeFormat("ru-RU", { weekday: "short" }).format(date);
+
+        const number = document.createElement("strong");
+        number.className = "block mt-1";
+        number.textContent = String(date.getDate());
+
+        cell.append(weekday, number);
+        calendar.append(cell);
+      }
+    }
+
+    function renderBookingModal() {
+      const quote = calculate(bookingSnapshot);
+      $("#modal-house").textContent = quote.house.name;
+      $("#modal-dates").textContent =
+        `${formatDate(bookingSnapshot.arrival)} — ${formatDate(bookingSnapshot.departure)}`;
+      $("#modal-guests").textContent =
+        `${quote.nights} ${plural(quote.nights, ["ночь", "ночи", "ночей"])} · ` +
+        `${bookingSnapshot.guests} ${plural(bookingSnapshot.guests, ["гость", "гостя", "гостей"])}`;
+      $("#modal-lodging").textContent = money(quote.lodging);
+      $("#modal-discount").textContent = "−" + money(quote.discount);
+      $("#modal-total").textContent = money(quote.total);
+      renderExtraRows($("#modal-extras"), quote.extras);
+
+      $("#pms-stay").textContent =
+        `${quote.house.name} · ${formatDate(bookingSnapshot.arrival)} — ${formatDate(bookingSnapshot.departure)}`;
+      $("#pms-deposit").textContent = money(quote.deposit);
+      $("#pms-remainder").textContent =
+        `Остаток после предоплаты: ${money(quote.remainder)}. Условия оплаты — после подключения PMS.`;
+
+      $("#demo-payment-status").hidden = true;
+      $("#demo-payment-status").textContent = "";
+      renderDemoCalendar(bookingSnapshot);
+    }
+
+    bookingForm.addEventListener("submit", event => {
+      event.preventDefault();
+      if (!readAndSync(bookingForm)) {
+        bookingForm.reportValidity();
+        return;
+      }
+
+      bookingSnapshot = {
+        ...bookingState,
+        extras: new Set(bookingState.extras)
+      };
+      renderBookingModal();
+      selectBookingTab("messenger-tab");
+      openDialog(bookingDialog);
+    });
+
+    function buildBookingMessage() {
+      if (!bookingSnapshot) return "";
+      const quote = calculate(bookingSnapshot);
+      const name = $("#guest-name").value.trim() || "не указано";
+      const phone = $("#guest-phone").value.trim() || "не указан";
+      const extras = quote.extras.length
+        ? quote.extras.map(key => `• ${SERVICES[key].name}: ${money(SERVICES[key].price)}`).join("\n")
+        : "• Без дополнительных услуг";
+
+      return [
+        "ПИХТА & ПЛАТО | Заявка на отдых",
+        "Горный бутик-глэмпинг в Лаго-Наки",
+        "",
+        `Гость: ${name}`,
+        `Телефон: ${phone}`,
+        "",
+        `Размещение: ${quote.house.name}`,
+        `Заезд: ${formatDate(bookingSnapshot.arrival)}`,
+        `Выезд: ${formatDate(bookingSnapshot.departure)}`,
+        `Ночей: ${quote.nights}`,
+        `Гостей: ${bookingSnapshot.guests}`,
+        "",
+        `Проживание до скидки: ${money(quote.lodging)}`,
+        `Скидка 10% на проживание: −${money(quote.discount)}`,
+        "Сравнение с базовым тарифом для агрегаторов Авито / Суточно.",
+        "",
+        "Дополнительные услуги:",
+        extras,
+        "",
+        `ИТОГО ПО РАСЧЁТУ: ${money(quote.total)}`,
+        "",
+        "Прошу проверить доступность и подтвердить окончательные условия.",
+        "Расчёт предварительный. Отправка заявки не резервирует даты."
+      ].join("\n");
+    }
+
+    const guestName = $("#guest-name");
+    const guestPhone = $("#guest-phone");
+
+    guestName.addEventListener("input", () => guestName.setCustomValidity(""));
+    guestPhone.addEventListener("input", () => guestPhone.setCustomValidity(""));
+
+    $("#request-form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      guestName.setCustomValidity(
+        guestName.value.trim().length >= 2 ? "" : "Укажите имя: минимум два символа."
+      );
+
+      const digits = guestPhone.value.replace(/\D/g, "");
+      guestPhone.setCustomValidity(
+        digits.length >= 10 && digits.length <= 15
+          ? ""
+          : "Укажите телефон, содержащий от 10 до 15 цифр."
+      );
+
+      if (!event.currentTarget.reportValidity()) return;
+
+      const channel = event.submitter?.value || "whatsapp";
+      const message = buildBookingMessage();
+      if (channel === "telegram") {
+        window.open(telegramURL(message), "_blank", "noopener,noreferrer");
+        showToast("Выберите получателя в Telegram. Заявка не отправлена консьержу автоматически.");
+      } else {
+        copyText(message).then(copied => showToast(copied
+          ? "Демо-режим: заявка скопирована. Контакт консьержа ещё не подключён."
+          : "Демо-режим: контакт консьержа ещё не подключён. Используйте кнопку копирования."));
+      }
+    });
+
+    $("#copy-quote").addEventListener("click", async () => {
+      const message = buildBookingMessage();
+      const copied = await copyText(message);
+      showToast(
+        copied
+          ? "Расчёт скопирован. Его можно сохранить или переслать."
+          : "Браузер не разрешил копирование. Можно передать расчёт через Telegram.",
+        { label: "Открыть Telegram", url: telegramURL(message) }
+      );
+    });
+
+    $("#demo-payment").addEventListener("click", () => {
+      if (!bookingSnapshot) return;
+      const quote = calculate(bookingSnapshot);
+      const method = $('input[name="payment-method"]:checked').value === "sbp"
+        ? "СБП"
+        : "карту «Мир»";
+
+      const status = $("#demo-payment-status");
+      status.hidden = false;
+      status.textContent =
+        `Демонстрация: предоплата ${money(quote.deposit)} через ${method}. ` +
+        "В рабочей интеграции после повторной проверки дат откроется платёжная форма провайдера. " +
+        "Только подтверждённый платёж и ответ PMS позволят показать бронь в шахматке. " +
+        "Сейчас платёж не создан, деньги не списаны, даты не заблокированы.";
+    });
+
+    /* Интерактивный чек-лист: отдельные отметки для каждого сценария. */
+    const CHECKLISTS = {
+      couple: {
+        title: "Для двоих",
+        note: "Тёплый слой, удобная обувь и немного места для спонтанных планов. Горный вечер прохладнее городского.",
+        groups: [
+          { title: "Для прогулок", items: ["Непромокаемая обувь с цепкой подошвой", "Флисовый слой и ветровка", "Небольшой рюкзак и термокружка"] },
+          { title: "Для отдыха", items: ["Купальные принадлежности для чана", "Удобная домашняя одежда", "Книга или любимая настольная игра"] },
+          { title: "Важные мелочи", items: ["Документы для заселения", "Личные лекарства и средства ухода", "Зарядные устройства и пауэрбанк"] }
+        ]
+      },
+      family: {
+        title: "Семья с детьми",
+        note: "Добавьте запасной комплект одежды и привычные вещи ребёнка. Детскую кроватку и питание согласуйте заранее.",
+        groups: [
+          { title: "На каждый день", items: ["Документы взрослых и детей", "Запасные комплекты тёплой одежды", "Непромокаемая детская обувь"] },
+          { title: "Для маленьких гостей", items: ["Любимая игрушка для сна", "Привычное питание и бутылочка", "Детская аптечка по рекомендациям врача"] },
+          { title: "Для общих открытий", items: ["Небольшие рюкзаки для прогулок", "Настольная игра или альбом", "Купальные принадлежности и сланцы"] }
+        ]
+      },
+      pet: {
+        title: "С питомцем",
+        note: "Сообщите консьержу о питомце до подтверждения. На прогулках по территории держите его под присмотром.",
+        groups: [
+          { title: "Спокойный переезд", items: ["Ветеринарный паспорт", "Поводок, шлейка и адресник", "Переноска или автомобильный фиксатор"] },
+          { title: "Привычный комфорт", items: ["Корм на весь заезд с небольшим запасом", "Миски для воды и еды", "Лежанка и любимая игрушка"] },
+          { title: "Забота о месте", items: ["Пакеты для уборки", "Полотенце для лап", "Согласование питомца с консьержем"] }
+        ]
+      },
+      work: {
+        title: "Workation",
+        note: "Если планируются видеозвонки, заранее уточните связь в выбранном доме и подготовьте резервный способ подключения.",
+        groups: [
+          { title: "Рабочий набор", items: ["Ноутбук и блок питания", "Наушники с микрофоном", "Нужные переходники и кабели"] },
+          { title: "Надёжный план", items: ["Офлайн-копии важных документов", "Резервный мобильный интернет", "Пауэрбанк и зарядка для телефона"] },
+          { title: "После задач", items: ["Тёплая одежда для прогулок", "Купальные принадлежности", "Книга для вечера без экрана"] }
+        ]
+      }
+    };
+
+    let checklistScenario = "couple";
+    let checklistChecked = {};
+
+    try {
+      const saved = JSON.parse(localStorage.getItem("pihta-checklist-v1") || "null");
+      if (saved && Object.hasOwn(CHECKLISTS, saved.scenario)) {
+        checklistScenario = saved.scenario;
+      }
+      if (saved?.checked && typeof saved.checked === "object") {
+        Object.keys(CHECKLISTS).forEach(key => {
+          const values = saved.checked[key];
+          checklistChecked[key] = Array.isArray(values)
+            ? values.filter(value => typeof value === "string" && /^\d-\d$/.test(value))
+            : [];
+        });
+      }
+    } catch {}
+
+    function persistChecklist() {
+      try {
+        localStorage.setItem("pihta-checklist-v1", JSON.stringify({
+          scenario: checklistScenario,
+          checked: checklistChecked
+        }));
+      } catch {}
+    }
+
+    function currentCheckedSet() {
+      return new Set(checklistChecked[checklistScenario] || []);
+    }
+
+    function updateChecklistProgress() {
+      const groups = CHECKLISTS[checklistScenario].groups;
+      const keys = groups.flatMap((group, groupIndex) =>
+        group.items.map((_, itemIndex) => `${groupIndex}-${itemIndex}`)
+      );
+      const checked = currentCheckedSet();
+      const count = keys.filter(key => checked.has(key)).length;
+      $("#checklist-progress").max = keys.length;
+      $("#checklist-progress").value = count;
+      $("#checklist-progress-label").textContent = `${count} / ${keys.length}`;
+    }
+
+    let revealObserver = null;
+
+    function observeReveals(root = document) {
+      $$(".reveal-up", root).forEach(element => {
+        if (reducedMotion.matches || !revealObserver) {
+          element.classList.add("is-visible");
+        } else {
+          revealObserver.observe(element);
+        }
+      });
+    }
+
+    function renderChecklist() {
+      const scenario = CHECKLISTS[checklistScenario];
+      const checked = currentCheckedSet();
+      const container = $("#checklist-columns");
+      container.replaceChildren();
+
+      $("#checklist-note").textContent = scenario.note;
+      $("#checklist-panel").setAttribute("aria-labelledby", `scenario-${checklistScenario}`);
+
+      $$("[data-scenario]").forEach(tab => {
+        const active = tab.dataset.scenario === checklistScenario;
+        tab.setAttribute("aria-selected", String(active));
+        tab.tabIndex = active ? 0 : -1;
+      });
+
+      scenario.groups.forEach((group, groupIndex) => {
+        const card = document.createElement("div");
+        card.className = "card p-6 reveal-up";
+        if (groupIndex === 1) card.classList.add("delay-100");
+        if (groupIndex === 2) card.classList.add("delay-200");
+
+        const number = document.createElement("p");
+        number.className = "text-[10px] text-primary font-bold tracking-widest mb-4";
+        number.textContent = `0${groupIndex + 1} / СОБРАТЬ С СОБОЙ`;
+
+        const title = document.createElement("h3");
+        title.className = "editorial text-3xl mb-4";
+        const emphasis = document.createElement("em");
+        emphasis.textContent = group.title;
+        title.append(emphasis);
+        card.append(number, title);
+
+        group.items.forEach((item, itemIndex) => {
+          const key = `${groupIndex}-${itemIndex}`;
+          const label = document.createElement("label");
+          label.className = "check-item";
+          const input = document.createElement("input");
+          input.type = "checkbox";
+          input.checked = checked.has(key);
+          input.dataset.checkKey = key;
+          const text = document.createElement("span");
+          text.textContent = item;
+          label.append(input, text);
+          card.append(label);
+        });
+
+        container.append(card);
+      });
+
+      updateChecklistProgress();
+      observeReveals(container);
+    }
+
+    $$("[data-scenario]").forEach(tab => {
+      tab.addEventListener("click", () => {
+        checklistScenario = tab.dataset.scenario;
+        persistChecklist();
+        renderChecklist();
+      });
+    });
+
+    installTabKeyboard($("#scenario-tabs"), "[role='tab']", tab => {
+      checklistScenario = tab.dataset.scenario;
+      persistChecklist();
+      renderChecklist();
+    });
+
+    $("#checklist-columns").addEventListener("change", event => {
+      const input = event.target;
+      if (!input.matches("[data-check-key]")) return;
+      const checked = currentCheckedSet();
+      if (input.checked) checked.add(input.dataset.checkKey);
+      else checked.delete(input.dataset.checkKey);
+      checklistChecked[checklistScenario] = [...checked];
+      persistChecklist();
+      updateChecklistProgress();
+    });
+
+    function buildChecklistText() {
+      const scenario = CHECKLISTS[checklistScenario];
+      const checked = currentCheckedSet();
+      const lines = [
+        "ПИХТА & ПЛАТО | Сборы в горы",
+        `Сценарий: ${scenario.title}`,
+        "Лаго-Наки · высота 1 400 м",
+        ""
+      ];
+
+      scenario.groups.forEach((group, groupIndex) => {
+        lines.push(group.title.toUpperCase());
+        group.items.forEach((item, itemIndex) => {
+          lines.push(`${checked.has(`${groupIndex}-${itemIndex}`) ? "✅" : "☐"} ${item}`);
+        });
+        lines.push("");
+      });
+
+      lines.push(
+        "УЖЕ В ШАЛЕ",
+        "Постельное бельё, полотенца, посуда, фен.",
+        "",
+        scenario.note,
+        "",
+        "Хорошей дороги и медленных утр!"
+      );
+      return lines.join("\n");
+    }
+
+    async function exportChecklist() {
+      const text = buildChecklistText();
+      const copied = await copyText(text);
+      showToast(
+        copied
+          ? "Чек-лист скопирован вместе с вашими отметками."
+          : "Браузер не разрешил копирование. Список можно открыть в Telegram.",
+        { label: "Отправить себе в Telegram", url: telegramURL(text) }
+      );
+    }
+
+    $("#export-checklist").addEventListener("click", exportChecklist);
+
+    /* Web Audio: мягкий ветер и редкие потрескивания без MP3. */
+    const audioState = {
+      context: null,
+      master: null,
+      on: false,
+      busy: false,
+      crackleTimer: null,
+      suspendTimer: null,
+      volume: 0.30
+    };
+
+    function noiseBuffer(context, kind, seconds = 5) {
+      const length = Math.floor(context.sampleRate * seconds);
+      const buffer = context.createBuffer(1, length, context.sampleRate);
+      const data = buffer.getChannelData(0);
+
+      let brown = 0;
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+
+      for (let i = 0; i < length; i++) {
+        const white = Math.random() * 2 - 1;
+
+        if (kind === "brown") {
+          brown = (brown + .02 * white) / 1.02;
+          data[i] = brown * 3.5;
+        } else {
+          b0 = .99886 * b0 + white * .0555179;
+          b1 = .99332 * b1 + white * .0750759;
+          b2 = .969 * b2 + white * .153852;
+          b3 = .8665 * b3 + white * .3104856;
+          b4 = .55 * b4 + white * .5329522;
+          b5 = -.7616 * b5 - white * .016898;
+          data[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * .5362) * .11;
+          b6 = white * .115926;
+        }
+      }
+
+      /* Небольшое сглаживание стыка зацикленного буфера. */
+      const fade = Math.min(Math.floor(context.sampleRate * .025), length / 2);
+      for (let i = 0; i < fade; i++) {
+        const factor = i / fade;
+        data[i] *= factor;
+        data[length - 1 - i] *= factor;
+      }
+      return buffer;
+    }
+
+    function initialiseAudio() {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContextClass) throw new Error("Web Audio недоступен");
+
+      const context = new AudioContextClass();
+      const master = context.createGain();
+      master.gain.value = 0;
+
+      const compressor = context.createDynamicsCompressor();
+      compressor.threshold.value = -22;
+      compressor.knee.value = 16;
+      compressor.ratio.value = 5;
+      compressor.attack.value = .02;
+      compressor.release.value = .4;
+      master.connect(compressor);
+      compressor.connect(context.destination);
+
+      const brown = context.createBufferSource();
+      brown.buffer = noiseBuffer(context, "brown");
+      brown.loop = true;
+      const lowpass = context.createBiquadFilter();
+      lowpass.type = "lowpass";
+      lowpass.frequency.value = 480;
+      lowpass.Q.value = .5;
+      const brownGain = context.createGain();
+      brownGain.gain.value = .28;
+      brown.connect(lowpass);
+      lowpass.connect(brownGain);
+      brownGain.connect(master);
+      brown.start();
+
+      const pink = context.createBufferSource();
+      pink.buffer = noiseBuffer(context, "pink");
+      pink.loop = true;
+      const windHigh = context.createBiquadFilter();
+      windHigh.type = "highpass";
+      windHigh.frequency.value = 100;
+      const windLow = context.createBiquadFilter();
+      windLow.type = "lowpass";
+      windLow.frequency.value = 1250;
+      windLow.Q.value = .4;
+      const windGain = context.createGain();
+      windGain.gain.value = .10;
+      pink.connect(windHigh);
+      windHigh.connect(windLow);
+      windLow.connect(windGain);
+      windGain.connect(master);
+      pink.start();
+
+      const modulation = context.createOscillator();
+      modulation.frequency.value = .085;
+      const modulationDepth = context.createGain();
+      modulationDepth.gain.value = .028;
+      modulation.connect(modulationDepth);
+      modulationDepth.connect(windGain.gain);
+      modulation.start();
+
+      audioState.context = context;
+      audioState.master = master;
+    }
+
+    function playCrackle() {
+      const context = audioState.context;
+      if (!audioState.on || !context || context.state !== "running") return;
+
+      const duration = .018 + Math.random() * .045;
+      const length = Math.floor(context.sampleRate * duration);
+      const buffer = context.createBuffer(1, length, context.sampleRate);
+      const data = buffer.getChannelData(0);
+
+      for (let i = 0; i < length; i++) {
+        data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / length, 2);
+      }
+
+      const source = context.createBufferSource();
+      source.buffer = buffer;
+      const filter = context.createBiquadFilter();
+      filter.type = "bandpass";
+      filter.frequency.value = 1100 + Math.random() * 1600;
+      filter.Q.value = .65;
+      const gain = context.createGain();
+      const now = context.currentTime;
+
+      gain.gain.setValueAtTime(.0001, now);
+      gain.gain.exponentialRampToValueAtTime(.025 + Math.random() * .045, now + .003);
+      gain.gain.exponentialRampToValueAtTime(.0001, now + duration);
+
+      source.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioState.master);
+      source.start();
+      source.stop(now + duration + .01);
+      source.onended = () => {
+        source.disconnect();
+        filter.disconnect();
+        gain.disconnect();
+      };
+    }
+
+    function scheduleCrackle() {
+      clearTimeout(audioState.crackleTimer);
+      if (!audioState.on) return;
+      audioState.crackleTimer = setTimeout(() => {
+        if (!audioState.on) return;
+        playCrackle();
+        scheduleCrackle();
+      }, 850 + Math.random() * 1900);
+    }
+
+    function updateAudioUI() {
+      $("#atmosphere-button").setAttribute("aria-pressed", String(audioState.on));
+      $("#atmosphere-button").classList.toggle("is-playing", audioState.on);
+      $("#atmosphere-label").textContent = audioState.on
+        ? "Выключить атмосферу: костёр и ночной лес"
+        : "Слушать атмосферу: костёр и ночной лес";
+      $("#volume-control").hidden = !audioState.on;
+    }
+
+    function stopAmbience() {
+      audioState.on = false;
+      clearTimeout(audioState.crackleTimer);
+      clearTimeout(audioState.suspendTimer);
+
+      const context = audioState.context;
+      if (context && audioState.master) {
+        const gain = audioState.master.gain;
+        const now = context.currentTime;
+        gain.cancelScheduledValues(now);
+        gain.setTargetAtTime(.0001, now, .16);
+
+        audioState.suspendTimer = setTimeout(() => {
+          if (!audioState.on && context.state === "running") {
+            context.suspend().catch(() => {});
+          }
+        }, 950);
+      }
+      updateAudioUI();
+    }
+
+    async function toggleAmbience() {
+      if (audioState.busy) return;
+
+      if (audioState.on) {
+        stopAmbience();
+        return;
+      }
+
+      audioState.busy = true;
+      clearTimeout(audioState.suspendTimer);
+
+      try {
+        if (!audioState.context) initialiseAudio();
+        await audioState.context.resume();
+
+        if (document.hidden) {
+          await audioState.context.suspend();
+          return;
+        }
+
+        audioState.on = true;
+        const now = audioState.context.currentTime;
+        audioState.master.gain.cancelScheduledValues(now);
+        audioState.master.gain.setTargetAtTime(audioState.volume * .65, now, .4);
+        updateAudioUI();
+        scheduleCrackle();
+      } catch {
+        stopAmbience();
+        showToast("Браузер не разрешил воспроизведение звука. Попробуйте открыть страницу в обычной вкладке.");
+      } finally {
+        audioState.busy = false;
+      }
+    }
+
+    $("#atmosphere-button").addEventListener("click", toggleAmbience);
+
+    $("#atmosphere-volume").addEventListener("input", event => {
+      audioState.volume = Number(event.target.value) / 100;
+      if (audioState.on && audioState.context) {
+        audioState.master.gain.setTargetAtTime(
+          audioState.volume * .65,
+          audioState.context.currentTime,
+          .15
+        );
+      }
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden && audioState.on) stopAmbience();
+    });
+
+    window.addEventListener("pagehide", stopAmbience);
+
+    /* Scroll reveal с безопасным поведением без JS и reduced motion. */
+    if ("IntersectionObserver" in window && !reducedMotion.matches) {
+      revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        });
+      }, { threshold: .12 });
+
+      document.documentElement.classList.add("reveal-ready");
+    }
+
+    const topButton = document.getElementById("back-to-top");
+    const updateScrollUI = () => {
+      const scrolled = window.scrollY > 420;
+      topButton.classList.toggle("is-visible", scrolled);
+      document.querySelector(".site-header").classList.toggle("is-scrolled", window.scrollY > 24);
+    };
+    window.addEventListener("scroll", updateScrollUI, { passive:true });
+    topButton.addEventListener("click", () => window.scrollTo({top:0,behavior:reducedMotion.matches?"instant":"smooth"}));
+    updateScrollUI();
+
+    let menuTouchStart = null;
+    mobileMenu.addEventListener("touchstart", event => {
+      if (event.touches.length === 1) menuTouchStart = {x:event.touches[0].clientX,y:event.touches[0].clientY};
+    }, {passive:true});
+    mobileMenu.addEventListener("touchend", event => {
+      if (!menuTouchStart || event.changedTouches.length !== 1) return;
+      const dx=event.changedTouches[0].clientX-menuTouchStart.x;
+      const dy=event.changedTouches[0].clientY-menuTouchStart.y;
+      if (dx>95 && Math.abs(dx)>Math.abs(dy)*1.4) closeDialog(mobileMenu);
+      menuTouchStart=null;
+    }, {passive:true});
+
+    renderChecklist();
+    observeReveals();
+
+    reducedMotion.addEventListener?.("change", event => {
+      if (event.matches) {
+        revealObserver?.disconnect();
+        $$(".reveal-up").forEach(element => element.classList.add("is-visible"));
+      }
+    });
+  </script>
+</body>
+</html>
